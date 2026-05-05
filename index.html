@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Eat Out Norwich | Norfolk's Best Restaurants, Reviews & Food Directory</title>
+<meta name="description" content="Discover the best restaurants, cafés, pubs and food experiences across Norwich and Norfolk. Honest reviews, hidden gems and 50+ listings — from Michelin stars to cosy village pubs.">
+<meta name="keywords" content="restaurants Norwich, best restaurants Norfolk, where to eat Norwich, Norwich food guide, Norfolk dining, Norwich restaurant reviews, best pubs Norfolk, brunch Norwich, fine dining Norwich, Norfolk food directory">
+<meta name="author" content="Eat Out Norwich">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eatoutnorwich.com/">
+
+<!-- Open Graph (Facebook, Instagram link previews) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eatoutnorwich.com/">
+<meta property="og:title" content="Eat Out Norwich | Norfolk's Best Restaurants & Food Directory">
+<meta property="og:description" content="Discover the best restaurants, cafés, pubs and food experiences across Norwich and Norfolk. Honest reviews from @eat_out_norwich — 33k followers strong.">
+<meta property="og:image" content="https://eatoutnorwich.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Eat Out Norwich">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@eat_out_norwich">
+<meta name="twitter:title" content="Eat Out Norwich | Norfolk's Best Restaurants & Food Directory">
+<meta name="twitter:description" content="Discover the best restaurants, cafés, pubs and food experiences across Norwich and Norfolk. Honest reviews from @eat_out_norwich.">
+<meta name="twitter:image" content="https://eatoutnorwich.com/og-image.jpg">
+
+<!-- Structured Data — Local Business Directory -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Eat Out Norwich",
+  "url": "https://eatoutnorwich.com",
+  "description": "Norfolk's leading restaurant review and food directory, covering Norwich and Norfolk",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://eatoutnorwich.com/#directory?search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "sameAs": [
+    "https://www.instagram.com/eat_out_norwich/",
+    "https://www.facebook.com/eatoutnorwich"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Eat Out Norwich",
+  "url": "https://eatoutnorwich.com",
+  "logo": "https://eatoutnorwich.com/logo.png",
+  "description": "Norwich and Norfolk's most trusted food review channel and restaurant directory",
+  "email": "eatoutnorwich@gmail.com",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Norfolk, England"
+  },
+  "sameAs": [
+    "https://www.instagram.com/eat_out_norwich/",
+    "https://www.facebook.com/eatoutnorwich"
+  ]
+}
+</script>
+
+<!-- Geo tags for local SEO -->
+<meta name="geo.region" content="GB-NFK">
+<meta name="geo.placename" content="Norwich, Norfolk">
+<meta name="geo.position" content="52.6309;1.2974">
+<meta name="ICBM" content="52.6309, 1.2974">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal: #1a5c5a; --teal-dark: #0f3d3b; --lime: #c8d62b; --lime-dark: #a8b520;
+    --white: #ffffff; --off-white: #f8f9f3; --mid: #5a6b6a; --dark: #0d1f1e; --border: #dde8e7;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--dark); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 3rem; height: 70px; background: rgba(255,255,255,0.97); backdrop-filter: blur(14px); border-bottom: 3px solid var(--lime); }
+  .nav-logo img { height: 44px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a { text-decoration: none; color: var(--teal); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--lime-dark); }
+  .nav-cta { background: var(--lime) !important; color: var(--teal-dark) !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 800 !important; }
+  .nav-cta:hover { background: var(--teal-dark) !important; color: var(--white) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--teal); }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 3rem 4rem; position: relative; overflow: hidden; background: var(--teal-dark); }
+  .hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(200,214,43,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(200,214,43,0.05) 1px, transparent 1px); background-size: 48px 48px; }
+  .hero::after { content: ''; position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(200,214,43,0.1) 0%, transparent 70%); right: -150px; top: 50%; transform: translateY(-50%); pointer-events: none; }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto; width: 100%; align-items: center; position: relative; z-index: 1; }
+  .hero-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lime); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; }
+  .hero-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 2px; background: var(--lime); border-radius: 2px; }
+  .hero h1 { font-family: 'Lora', serif; font-size: clamp(2.6rem, 4.5vw, 4rem); font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; color: var(--white); margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: italic; color: var(--lime); }
+  .hero-sub { font-size: 0.98rem; color: rgba(255,255,255,0.62); max-width: 400px; margin-bottom: 2.5rem; line-height: 1.8; }
+  .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--lime); color: var(--teal-dark); padding: 0.85rem 2rem; text-decoration: none; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 3px; transition: all 0.2s; display: inline-block; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif; }
+  .btn-primary:hover { background: var(--lime-dark); transform: translateY(-2px); color: var(--white); }
+  .btn-ghost-light { color: var(--white); text-decoration: none; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 2px solid rgba(200,214,43,0.45); padding-bottom: 2px; transition: all 0.2s; }
+  .btn-ghost-light:hover { border-color: var(--lime); color: var(--lime); }
+  .btn-ghost-teal { color: var(--teal); text-decoration: none; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 2px solid var(--teal); padding-bottom: 2px; transition: all 0.2s; }
+  .btn-ghost-teal:hover { color: var(--lime-dark); border-color: var(--lime-dark); }
+
+  .hero-visual { position: relative; height: 480px; }
+  .hero-card-big { position: absolute; right: 0; top: 0; width: 74%; height: 340px; border-radius: 6px; overflow: hidden; display: flex; align-items: flex-end; border: 1px solid rgba(200,214,43,0.2); background: #1a2e1a; }
+  .hero-emoji { font-size: 5rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-70%); opacity: 0.4; }
+  .hero-card-big-inner { background: linear-gradient(to top, rgba(10,30,30,0.92) 0%, transparent 60%); padding: 1.5rem; width: 100%; }
+  .hero-card-tag { display: inline-block; background: var(--lime); color: var(--teal-dark); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.22rem 0.7rem; border-radius: 3px; margin-bottom: 0.5rem; }
+  .hero-card-big-inner h3 { font-family: 'Lora', serif; color: white; font-size: 1.4rem; font-weight: 600; }
+  .hero-card-sm { position: absolute; left: 0; bottom: 0; width: 58%; background: var(--white); border-radius: 6px; padding: 1.2rem; box-shadow: 0 12px 40px rgba(0,0,0,0.3); border-left: 4px solid var(--lime); }
+  .hero-card-sm-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.3rem; }
+  .hero-card-sm h4 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 600; color: var(--teal-dark); margin-bottom: 0.3rem; }
+  .stars { color: var(--lime-dark); font-size: 0.85rem; }
+
+  /* STATS */
+  .stats-bar { background: var(--teal); padding: 2rem 3rem; display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Lora', serif; font-size: 2rem; font-weight: 600; color: var(--lime); }
+  .stat-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.48); margin-top: 0.2rem; }
+
+  /* SECTIONS */
+  section { padding: 6rem 3rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.7rem; }
+  .section-eyebrow::before { content: ''; display: block; width: 2rem; height: 2px; background: var(--lime); border-radius: 2px; }
+  .section-title { font-family: 'Lora', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; color: var(--teal-dark); margin-bottom: 0.8rem; }
+  .section-sub { color: var(--mid); font-size: 0.93rem; max-width: 560px; line-height: 1.7; margin-bottom: 2.5rem; }
+  .section-header-row { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
+
+  /* DIRECTORY */
+  #directory { background: var(--off-white); }
+  .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .filter-btn { padding: 0.42rem 1rem; border: 2px solid var(--border); background: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; cursor: pointer; border-radius: 3px; transition: all 0.2s; color: var(--mid); }
+  .filter-btn:hover { border-color: var(--teal); color: var(--teal); }
+  .filter-btn.active { background: var(--teal); color: var(--white); border-color: var(--teal); }
+
+  /* Region dividers */
+  .region-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); padding: 1.5rem 0 0.8rem; display: flex; align-items: center; gap: 0.8rem; }
+  .region-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* REVIEWED cards */
+  .restaurant-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.2rem; }
+  .restaurant-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; }
+  .restaurant-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(26,92,90,0.12); }
+  .rc-image {
+    height: 160px; position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--teal-dark);
+    background-size: cover; background-position: center;
+    transition: background-image 0.4s ease;
+  }
+  .rc-image::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,30,30,0.55) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  /* placeholder shimmer while loading */
+  .rc-image.loading {
+    background: linear-gradient(90deg, #0f3d3b 25%, #1a5c5a 50%, #0f3d3b 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+  }
+  @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+  .rc-image .rc-placeholder-text {
+    font-family: 'Lora', serif; font-size: 0.85rem; font-weight: 600;
+    color: rgba(255,255,255,0.35); text-align: center; padding: 0 1rem;
+    position: relative; z-index: 1; line-height: 1.4;
+  }
+  .rc-badge { position: absolute; top: 0.7rem; right: 0.7rem; background: var(--teal); color: white; font-size: 0.55rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 3px; z-index: 2; }
+  .rc-reviewed-badge { position: absolute; top: 0.7rem; left: 0.7rem; background: var(--lime); color: var(--teal-dark); font-size: 0.55rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 3px; z-index: 2; }
+  .rc-award-badge { position: absolute; bottom: 0.7rem; right: 0.7rem; background: #d4a017; color: white; font-size: 0.55rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 3px; z-index: 2; }
+
+  /* API key notice banner */
+  .api-notice { background: #fffbea; border: 1.5px solid var(--lime); border-radius: 6px; padding: 0.9rem 1.2rem; margin-bottom: 1.5rem; font-size: 0.78rem; color: var(--teal-dark); display: flex; align-items: center; gap: 0.7rem; }
+  .api-notice strong { font-weight: 800; }
+  .api-notice code { background: rgba(0,0,0,0.08); padding: 0.1rem 0.4rem; border-radius: 3px; font-family: monospace; font-size: 0.82rem; }
+  .rc-body { padding: 1rem 1.1rem; }
+  .rc-cuisine { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.25rem; }
+  .rc-name { font-family: 'Lora', serif; font-size: 1.05rem; font-weight: 600; color: var(--teal-dark); margin-bottom: 0.25rem; }
+  .rc-location { font-size: 0.68rem; color: var(--mid); font-weight: 500; margin-bottom: 0.45rem; }
+  .rc-desc { font-size: 0.8rem; color: var(--mid); line-height: 1.5; }
+  .rc-quote { font-size: 0.75rem; color: var(--teal); font-style: italic; margin-top: 0.45rem; line-height: 1.5; border-left: 2px solid var(--lime); padding-left: 0.55rem; }
+  .rc-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid var(--border); }
+  .rc-price { font-size: 0.78rem; color: var(--mid); font-weight: 600; }
+  .rc-stars { color: var(--lime-dark); font-size: 0.78rem; }
+
+  /* BASIC (free) cards */
+  .basic-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.3rem; transition: box-shadow 0.2s; position: relative; }
+  .basic-card:hover { box-shadow: 0 8px 24px rgba(26,92,90,0.09); }
+  .basic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+  .basic-name { font-family: 'Lora', serif; font-size: 0.98rem; font-weight: 600; color: var(--teal-dark); }
+  .basic-meta { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
+  .basic-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--off-white); color: var(--teal); border: 1px solid var(--border); padding: 0.15rem 0.5rem; border-radius: 2px; margin-bottom: 0.3rem; }
+  .claim-btn { margin-top: 0.6rem; display: inline-block; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--lime-dark); border: 1.5px solid var(--lime); padding: 0.3rem 0.7rem; border-radius: 3px; cursor: pointer; background: none; font-family: 'Montserrat', sans-serif; transition: all 0.2s; text-decoration: none; }
+  .claim-btn:hover { background: var(--lime); color: var(--teal-dark); }
+  .free-badge { position: absolute; top: 0.7rem; right: 0.7rem; background: var(--off-white); color: var(--mid); font-size: 0.55rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.18rem 0.5rem; border-radius: 3px; border: 1px solid var(--border); }
+
+  /* UPGRADE BANNER */
+  .upgrade-banner { background: var(--teal-dark); border-radius: 6px; padding: 1.8rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin: 2rem 0; border-left: 5px solid var(--lime); }
+  .upgrade-banner h3 { font-family: 'Lora', serif; color: white; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .upgrade-banner p { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+
+  .listing-cta { margin-top: 2.5rem; border-radius: 6px; padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; background: var(--teal); border-left: 6px solid var(--lime); }
+  .listing-cta h3 { font-family: 'Lora', serif; color: white; font-size: 1.3rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .listing-cta p { color: rgba(255,255,255,0.58); font-size: 0.88rem; }
+
+  /* REVIEWS */
+  #reviews { background: var(--white); }
+  .blog-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
+  .blog-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; cursor: pointer; }
+  .blog-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(26,92,90,0.1); }
+  .blog-side { display: flex; flex-direction: column; gap: 1.5rem; }
+  .bc-image { height: 220px; display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; }
+  .bc-image-sm { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; }
+  .bc-tag { position: absolute; bottom: 0.8rem; left: 0.8rem; background: var(--lime); color: var(--teal-dark); font-size: 0.58rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.22rem 0.6rem; border-radius: 3px; }
+  .bc-body { padding: 1.2rem; }
+  .bc-date { font-size: 0.68rem; color: var(--mid); margin-bottom: 0.4rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; }
+  .bc-title { font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 600; line-height: 1.3; margin-bottom: 0.6rem; color: var(--teal-dark); }
+  .bc-title-sm { font-family: 'Lora', serif; font-size: 0.98rem; font-weight: 600; line-height: 1.3; margin-bottom: 0.5rem; color: var(--teal-dark); }
+  .bc-excerpt { font-size: 0.85rem; color: var(--mid); line-height: 1.6; }
+  .bc-read { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--teal); text-decoration: none; transition: all 0.2s; }
+  .bc-read:hover { gap: 0.7rem; color: var(--lime-dark); }
+
+  /* INSTAGRAM */
+  #instagram { background: var(--off-white); }
+  .insta-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.6rem; }
+  .insta-cell { aspect-ratio: 1; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; cursor: pointer; overflow: hidden; position: relative; transition: transform 0.2s; }
+  .insta-cell:hover { transform: scale(1.03); }
+  .insta-cell:hover .insta-overlay { opacity: 1; }
+  .insta-overlay { position: absolute; inset: 0; background: rgba(15,61,59,0.84); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.25s; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: white; }
+  .insta-handle { text-align: center; margin-top: 1.5rem; font-size: 0.88rem; color: var(--mid); }
+  .insta-handle a { color: var(--teal); font-weight: 700; text-decoration: none; }
+
+  /* WORK */
+  #work { background: var(--teal-dark); }
+  #work .section-eyebrow { color: var(--lime); }
+  #work .section-eyebrow::before { background: var(--lime); }
+  #work .section-title { color: var(--white); }
+  #work .section-sub { color: rgba(255,255,255,0.52); }
+  .packages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+  .package-card { border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 1.8rem; position: relative; background: rgba(255,255,255,0.04); transition: transform 0.2s; color: var(--white); }
+  .package-card:hover { transform: translateY(-4px); }
+  .package-card.highlighted { background: var(--white); border-color: var(--lime); border-width: 2px; color: var(--teal-dark); }
+  .package-card.highlighted .pkg-feature { color: var(--mid); border-color: var(--border); }
+  .package-card.highlighted .pkg-name,.package-card.highlighted .pkg-price { color: var(--teal-dark); }
+  .package-card.highlighted .pkg-feature::before { color: var(--teal); }
+  .pkg-popular { position: absolute; top: -0.7rem; left: 50%; transform: translateX(-50%); background: var(--lime); color: var(--teal-dark); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.8rem; border-radius: 20px; white-space: nowrap; }
+  .pkg-name { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+  .pkg-label { font-size: 0.72rem; margin-bottom: 1.2rem; opacity: 0.6; }
+  .pkg-price { font-size: 1.8rem; font-weight: 800; margin-bottom: 1.2rem; }
+  .pkg-price span { font-size: 0.82rem; font-weight: 400; opacity: 0.6; }
+  .pkg-features { list-style: none; margin-bottom: 1.5rem; }
+  .pkg-feature { font-size: 0.78rem; padding: 0.45rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-weight: 500; display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.72); }
+  .pkg-feature::before { content: '✓'; font-weight: 800; font-size: 0.7rem; color: var(--lime); flex-shrink: 0; }
+  .btn-outline-light { display: block; text-align: center; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border: 2px solid rgba(255,255,255,0.25); padding: 0.7rem; border-radius: 3px; transition: all 0.2s; font-family: 'Montserrat', sans-serif; cursor: pointer; background: none; width: 100%; }
+  .btn-outline-light:hover { border-color: var(--lime); color: var(--lime); }
+
+  /* CONTACT */
+  #contact { background: var(--off-white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+  .form-group input, .form-group select, .form-group textarea { font-family: 'Montserrat', sans-serif; font-size: 0.88rem; padding: 0.75rem 1rem; border: 2px solid var(--border); border-radius: 3px; background: var(--white); color: var(--dark); transition: border-color 0.2s; outline: none; resize: none; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--lime); }
+  .contact-intro { font-size: 0.95rem; color: var(--mid); line-height: 1.75; margin-bottom: 2rem; }
+  .contact-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; }
+  .contact-icon { width: 2.6rem; height: 2.6rem; background: var(--teal); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .contact-detail-text h4 { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--teal); margin-bottom: 0.2rem; }
+  .contact-detail-text p { font-size: 0.88rem; color: var(--mid); }
+  .social-row { display: flex; gap: 0.6rem; margin-top: 2rem; flex-wrap: wrap; }
+  .social-btn { padding: 0.6rem 1.3rem; border: 2px solid var(--teal); background: transparent; border-radius: 3px; font-size: 0.73rem; font-weight: 700; letter-spacing: 0.07em; cursor: pointer; transition: all 0.2s; font-family: 'Montserrat', sans-serif; text-decoration: none; color: var(--teal); display: inline-flex; align-items: center; gap: 0.45rem; }
+  .social-btn:hover { background: var(--teal); color: var(--white); }
+  .social-btn-insta { border-color: #E1306C; color: #E1306C; }
+  .social-btn-insta:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-color: transparent; color: white; }
+  .social-btn-fb { border-color: #1877F2; color: #1877F2; }
+  .social-btn-fb:hover { background: #1877F2; border-color: #1877F2; color: white; }
+
+  /* FOOTER */
+  footer { background: var(--dark); color: var(--white); padding: 2.5rem 3rem; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+  .footer-logo img { height: 38px; width: auto; opacity: 0.85; }
+  .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.28); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.73rem; color: rgba(255,255,255,0.42); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--lime); }
+
+  /* bg helpers */
+  .bg-gastro{background:#2a1a0a}.bg-private{background:#0a1a2a}.bg-indian{background:#1a1a35}.bg-greek{background:#1a3535}
+  .bg-lounge{background:#0a2a2a}.bg-bakery{background:#2a1a2a}.bg-pizza{background:#2a0a0a}.bg-pub{background:#0a2a0a}
+  .bg-coffee{background:#1a1205}.bg-brunch{background:#1a2a10}.bg-fire{background:#1a0a0a}.bg-default{background:#0f3d3b}
+
+  @media(max-width:1100px){ .packages-grid{grid-template-columns:repeat(2,1fr)} }
+  @media(max-width:900px){
+    nav{padding:0 1.5rem} .nav-links{display:none} .hamburger{display:flex}
+    section{padding:4rem 1.5rem} .hero{padding:7rem 1.5rem 3rem} .hero-grid{grid-template-columns:1fr} .hero-visual{display:none}
+    .stats-bar{padding:1.5rem;gap:2rem} .blog-grid{grid-template-columns:1fr}
+    .packages-grid{grid-template-columns:1fr} .contact-grid{grid-template-columns:1fr}
+    .form-row{grid-template-columns:1fr} .insta-grid{grid-template-columns:repeat(3,1fr)}
+    .footer-inner{flex-direction:column;text-align:center} .footer-links{justify-content:center}
+    .listing-cta,.upgrade-banner{flex-direction:column;text-align:center}
+  }
+  .fade-up{opacity:0;transform:translateY(24px);animation:fadeUp .65s ease forwards}
+  @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+  .d1{animation-delay:.12s}.d2{animation-delay:.24s}.d3{animation-delay:.36s}.d4{animation-delay:.48s}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#"><img src="data:image/png;base64,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" alt="Eat Out Norwich"></a>
+  <ul class="nav-links">
+    <li><a href="#directory">Directory</a></li>
+    <li><a href="#map">Map</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#instagram">Instagram</a></li>
+    <li><a href="#work">Work With Us</a></li>
+    <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+  <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow fade-up">Norfolk's Food Directory</div>
+      <h1 class="fade-up d1">Discover <em>where</em><br>to eat in Norfolk</h1>
+      <p class="hero-sub fade-up d2">50+ honest reviews and listings across Norwich and Norfolk — from Michelin stars to hidden village pubs, all in one place.</p>
+      <div class="hero-actions fade-up d3">
+        <a href="#directory" class="btn-primary">Browse Directory</a>
+        <a href="#reviews" class="btn-ghost-light">Read Reviews →</a>
+      </div>
+    </div>
+    <div class="hero-visual fade-up d4">
+      <div class="hero-card-big bg-gastro">
+        <span class="hero-emoji">🥩</span>
+        <div class="hero-card-big-inner">
+          <div class="hero-card-tag">⭐ Editor's Pick</div>
+          <h3>King's Head Blofield</h3>
+        </div>
+      </div>
+      <div class="hero-card-sm">
+        <div class="hero-card-sm-label">Newest Review</div>
+        <h4>Chia Norwich</h4>
+        <div class="stars">★★★★★</div>
+        <p style="font-size:0.78rem;color:var(--mid);margin-top:0.4rem;">"Norwich's prettiest new brunch in the Lanes."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Restaurants Listed</div></div>
+  <div class="stat"><div class="stat-num">33k</div><div class="stat-label">Instagram Followers</div></div>
+  <div class="stat"><div class="stat-num">11</div><div class="stat-label">Reviewed in Person</div></div>
+  <div class="stat"><div class="stat-num">Norfolk</div><div class="stat-label">Wide Coverage</div></div>
+</div>
+
+<!-- DIRECTORY -->
+<section id="directory">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <div class="section-eyebrow">Find Your Table</div>
+        <h2 class="section-title">Norfolk Restaurant Directory</h2>
+        <p class="section-sub">Covering Norwich city, the North Norfolk coast, the Broads, South Norfolk and beyond. Reviewed listings are marked with ⭐ — basic free listings show a Claim button for owners to upgrade.</p>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All (50+)</button>
+      <button class="filter-btn" data-filter="norwich">Norwich City</button>
+      <button class="filter-btn" data-filter="northnorfolk">North Norfolk</button>
+      <button class="filter-btn" data-filter="broads">The Broads</button>
+      <button class="filter-btn" data-filter="southnorfolk">South Norfolk</button>
+      <button class="filter-btn" data-filter="reviewed">✅ Reviewed</button>
+      <button class="filter-btn" data-filter="finedining">Fine Dining</button>
+      <button class="filter-btn" data-filter="pub">Pubs</button>
+      <button class="filter-btn" data-filter="brunch">Brunch & Café</button>
+    </div>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- REVIEWED LISTINGS -->
+    <!-- ══════════════════════════════════════════ -->
+    <div class="region-label">⭐ Reviewed by Eat Out Norwich</div>
+    <div class="restaurant-grid" id="reviewedGrid">
+
+      <div class="restaurant-card" data-tags="reviewed broads northnorfolk pub finedining" data-place="King's Head Blofield Norfolk">
+        <div class="rc-image loading" data-place="King's Head Blofield Norfolk"><span class="rc-placeholder-text">King's Head Blofield</span><div class="rc-badge">Gastro Pub</div><div class="rc-reviewed-badge">⭐ Reviewed</div><div class="rc-award-badge">🏅 2 AA Rosettes</div></div>
+        <div class="rc-body"><div class="rc-cuisine">Modern British</div><div class="rc-name">King's Head Blofield</div><div class="rc-location">📍 Blofield, Norwich</div><div class="rc-desc">Family-run, 2 AA Rosette gastro pub with daily-changing seasonal menus from Norfolk & Suffolk suppliers.</div><div class="rc-quote">"The 2026 menu reboot has absolutely delivered."</div><div class="rc-meta"><span class="rc-price">£££</span><span class="rc-stars">★★★★★</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed norwich finedining" data-place="Norfolk's Edge Catering Norwich">
+        <div class="rc-image loading" data-place="Norfolk's Edge Catering Norwich"><span class="rc-placeholder-text">Norfolk's Edge</span><div class="rc-badge">Private Chef</div><div class="rc-reviewed-badge">⭐ Reviewed</div></div>
+        <div class="rc-body"><div class="rc-cuisine">Private Dining · Events</div><div class="rc-name">Norfolk's Edge</div><div class="rc-location">📍 Norfolk & Suffolk Wide</div><div class="rc-desc">Chef Alex Clare (Norfolk Chef of the Year 2017) and team come to your home. Multi-course restaurant quality in your own kitchen.</div><div class="rc-quote">"Faultless service, beautiful food — for the third year running."</div><div class="rc-meta"><span class="rc-price">££££</span><span class="rc-stars">★★★★★</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed norwich" data-place="Mowgli Street Food Norwich Chantry Place">
+        <div class="rc-image loading" data-place="Mowgli Street Food Norwich Chantry Place"><span class="rc-placeholder-text">Mowgli Street Food</span><div class="rc-badge">Indian Street Food</div><div class="rc-reviewed-badge">⭐ Reviewed</div></div>
+        <div class="rc-body"><div class="rc-cuisine">Indian Street Food</div><div class="rc-name">Mowgli Street Food</div><div class="rc-location">📍 Chantry Place, Norwich</div><div class="rc-desc">Founded by Nisha Katona MBE. Vibrant Indian home-kitchen dishes, legendary Chat Bombs and a £15pp Tiffin lunch.</div><div class="rc-quote">"The flavours were absolutely on point!"</div><div class="rc-meta"><span class="rc-price">££</span><span class="rc-stars">★★★★☆</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed norwich" data-place="Big Gyros Norwich Upper St Giles">
+        <div class="rc-image loading" data-place="Big Gyros Norwich Upper St Giles"><span class="rc-placeholder-text">Big Gyros</span><div class="rc-badge">Greek</div><div class="rc-reviewed-badge">⭐ Reviewed</div></div>
+        <div class="rc-body"><div class="rc-cuisine">Greek</div><div class="rc-name">Big Gyros</div><div class="rc-location">📍 Upper St Giles St, Norwich</div><div class="rc-desc">Authentic Greek on the Norwich Lanes. Gyros, souvlaki, mezze, live music nights and plate-smashing events.</div><div class="rc-quote">"Blown away by the authenticity and quality."</div><div class="rc-meta"><span class="rc-price">££</span><span class="rc-stars">★★★★☆</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed norwich brunch" data-place="Rivolo Lounge Norwich">
+        <div class="rc-image loading" data-place="Rivolo Lounge Norwich"><span class="rc-placeholder-text">Rivolo Lounge</span><div class="rc-badge">Café Bar</div><div class="rc-reviewed-badge">⭐ Reviewed</div></div>
+        <div class="rc-body"><div class="rc-cuisine">All-Day Dining · Cocktails</div><div class="rc-name">Rivolo Lounge</div><div class="rc-location">📍 St Ann Lane, River Wensum</div><div class="rc-desc">Norwich's riverside Lounge café bar. Creative menus, vegan & GF options, 2-for-£12 cocktails, cosy winter vibes.</div><div class="rc-quote">"Every plate feels like comfort season on a dish."</div><div class="rc-meta"><span class="rc-price">££</span><span class="rc-stars">★★★★☆</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed norwich brunch" data-place="Loaf Micro Bakery Dove Street Norwich">
+        <div class="rc-image loading" data-place="Loaf Micro Bakery Dove Street Norwich"><span class="rc-placeholder-text">Loaf Micro Bakery</span><div class="rc-badge">Artisan Bakery</div><div class="rc-reviewed-badge">⭐ Reviewed</div></div>
+        <div class="rc-body"><div class="rc-cuisine">Bakery · Brunch · Coffee</div><div class="rc-name">Loaf Micro Bakery</div><div class="rc-location">📍 15 Dove Street, Norwich</div><div class="rc-desc">Award-winning female-led micro bakery. 3-day sourdough, plant-forward bakes, single-origin coffee and slow morning energy.</div><div class="rc-quote">"A cinnamon bun so soft it barely made it to the table."</div><div class="rc-meta"><span class="rc-price">£</span><span class="rc-stars">★★★★★</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed broads" data-place="Larry's Pizzeria Hoveton Wroxham">
+        <div class="rc-image loading" data-place="Larry's Pizzeria Hoveton Wroxham"><span class="rc-placeholder-text">Larry's Pizzeria</span><div class="rc-badge">Pizza & Street Food</div><div class="rc-reviewed-badge">⭐ Reviewed</div></div>
+        <div class="rc-body"><div class="rc-cuisine">Pizza · Burgers · Street Food</div><div class="rc-name">Larry's Pizzeria</div><div class="rc-location">📍 Riverside Centre, Hoveton</div><div class="rc-desc">Build-your-own pizza at a flat price, loaded fries, dirty burgers and a chilli beef stack. Rated 4.8★ on Tripadvisor.</div><div class="rc-quote">"You choose the toppings — they make the magic."</div><div class="rc-meta"><span class="rc-price">£</span><span class="rc-stars">★★★★★</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed broads pub" data-place="The Stag Salhouse Norfolk">
+        <div class="rc-image loading" data-place="The Stag Salhouse Norfolk"><span class="rc-placeholder-text">The Stag Salhouse</span><div class="rc-badge">Country Pub</div><div class="rc-reviewed-badge">⭐ Reviewed</div></div>
+        <div class="rc-body"><div class="rc-cuisine">British · Seasonal</div><div class="rc-name">The Stag Salhouse</div><div class="rc-location">📍 Lower St, Salhouse</div><div class="rc-desc">400-year-old pub near Salhouse Broad. Daily specials, own butchery, Thursday Pie Night with mash & gravy for £12.</div><div class="rc-quote">"Comforting pub food when the weather turns — and at £12, what a bargain."</div><div class="rc-meta"><span class="rc-price">££</span><span class="rc-stars">★★★★☆</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed norwich brunch" data-place="OP Coffee Co Norwich">
+        <div class="rc-image loading" data-place="OP Coffee Co Norwich"><span class="rc-placeholder-text">OP Coffee Co.</span><div class="rc-badge">Speciality Coffee</div><div class="rc-reviewed-badge">⭐ Reviewed</div></div>
+        <div class="rc-body"><div class="rc-cuisine">Speciality Coffee · Bakery</div><div class="rc-name">OP Coffee Co.</div><div class="rc-location">📍 Norwich City Centre</div><div class="rc-desc">Single-origin, small-batch roasted beans from Colombia & Brazil. Named after a Norfolk WW2 veteran. Don't miss the Swirl tiramisu bun.</div><div class="rc-quote">"Some of the best single-origin coffee in the city."</div><div class="rc-meta"><span class="rc-price">£</span><span class="rc-stars">★★★★★</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed norwich brunch" data-place="Chia cafe Norwich Lanes">
+        <div class="rc-image loading" data-place="Chia cafe Norwich Lanes"><span class="rc-placeholder-text">Chia Norwich</span><div class="rc-badge">Brunch</div><div class="rc-reviewed-badge">⭐ Reviewed</div><div class="rc-award-badge">🆕 New</div></div>
+        <div class="rc-body"><div class="rc-cuisine">Brunch · Plant-Forward</div><div class="rc-name">Chia Norwich</div><div class="rc-location">📍 Norwich Lanes</div><div class="rc-desc">Norwich's prettiest new brunch spot in the Lanes. Chia bowls, veggie sourdough sandwiches and a pistachio basque cheesecake that's a 10/10.</div><div class="rc-quote">"Lovely people, great coffee, a spot you'll definitely come back to."</div><div class="rc-meta"><span class="rc-price">£</span><span class="rc-stars">★★★★★</span></div></div>
+      </div>
+
+      <div class="restaurant-card" data-tags="reviewed broads pub" data-place="The Huntsman pub Strumpshaw Norfolk">
+        <div class="rc-image loading" data-place="The Huntsman pub Strumpshaw Norfolk"><span class="rc-placeholder-text">The Huntsman</span><div class="rc-badge">Country Pub</div><div class="rc-reviewed-badge">⭐ Reviewed</div></div>
+        <div class="rc-body"><div class="rc-cuisine">British · Seasonal Game</div><div class="rc-name">The Huntsman</div><div class="rc-location">📍 Norwich Road, Strumpshaw</div><div class="rc-desc">Beautifully reopened 400-year-old pub. Crackling log fire, daily-changing specials, Norfolk game dishes and proper real ales.</div><div class="rc-quote">"Norfolk's cosiest autumn pub — deer & beer pie, pure comfort."</div><div class="rc-meta"><span class="rc-price">££</span><span class="rc-stars">★★★★☆</span></div></div>
+      </div>
+
+    </div>
+
+    <!-- UPGRADE BANNER -->
+    <div class="upgrade-banner">
+      <div><h3>Is your restaurant listed below?</h3><p>Basic free listings are auto-populated from public data. Claim yours to add photos, your own description, menu links and contact details — from £99/year.</p></div>
+      <a href="#contact" class="btn-primary" style="white-space:nowrap;">Claim Your Listing →</a>
+    </div>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- NORWICH CITY — BASIC LISTINGS -->
+    <!-- ══════════════════════════════════════════ -->
+    <div class="region-label" data-region="norwich">Norwich City Centre</div>
+    <div class="basic-grid" id="norwichGrid">
+
+      <div class="basic-card" data-tags="norwich finedining"><div class="free-badge">Free Listing</div><span class="basic-tag">Fine Dining</span><div class="basic-name">Benedicts</div><div class="basic-meta">📍 St Benedicts St · Modern British · £££</div><div class="basic-meta">Great British Menu chef Richard Bainbridge's acclaimed tasting menu restaurant.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich finedining"><div class="free-badge">Free Listing</div><span class="basic-tag">Fine Dining</span><div class="basic-name">Roger Hickman's</div><div class="basic-meta">📍 Upper St Giles St · Modern British · £££</div><div class="basic-meta">Elegant fine dining with locally sourced Norfolk produce. Tasting menus & à la carte.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich finedining"><div class="free-badge">Free Listing</div><span class="basic-tag">Fine Dining · Italian</span><div class="basic-name">Benoli</div><div class="basic-meta">📍 Timber Hill · Italian · £££</div><div class="basic-meta">Oliver Boon's acclaimed Italian restaurant. CV includes Gordon Ramsay and Michel Roux Jr.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">French</span><div class="basic-name">L'Hexagone</div><div class="basic-meta">📍 Norwich Lanes · French · ££</div><div class="basic-meta">Intimate French bistro by Thomas & Gemma Aubrit. Onion soup, boeuf bourguignon and Gallic charm.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Japanese</span><div class="basic-name">Shiki Japanese Restaurant</div><div class="basic-meta">📍 Tombland · Japanese · ££</div><div class="basic-meta">Acclaimed by Jay Rayner. Sushi on three-tiered cake stands, all-you-can-eat Tuesdays.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Fish & Chips</span><div class="basic-name">Grosvenor Fish Bar</div><div class="basic-meta">📍 Lower Goat Lane · Fish & Chips · £</div><div class="basic-meta">90-year-old institution, modernised with quirky specials and an underground grotto dining room.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Indian Vegetarian</span><div class="basic-name">Namaste India</div><div class="basic-meta">📍 Norwich City · Indian Vegetarian · £</div><div class="basic-meta">Family-run vegetarian Indian with authentic regional dishes from Gujarat, Mumbai and Punjab.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">British Brasserie</span><div class="basic-name">The Ivy Norwich Brasserie</div><div class="basic-meta">📍 Exchange St · British Brasserie · £££</div><div class="basic-meta">All-day brasserie dining from the renowned Ivy Collection in the heart of Norwich.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Gastro Pub</span><div class="basic-name">The Unthank Arms</div><div class="basic-meta">📍 Unthank Road · Gastro Pub · ££</div><div class="basic-meta">Well-loved neighbourhood gastropub offering quality seasonal food and a strong drinks list.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Pizza</span><div class="basic-name">Brick Pizza</div><div class="basic-meta">📍 Norwich Lanes · Pizza · £</div><div class="basic-meta">Serious thin-crust pizzas with Italian-imported or Norfolk-sourced toppings. Fiercely independent.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich brunch"><div class="free-badge">Free Listing</div><span class="basic-tag">Café · Brunch</span><div class="basic-name">Bread Source</div><div class="basic-meta">📍 St Giles St · Bakery & Café · £</div><div class="basic-meta">Norwich's beloved artisan bakery. Sourdough loaves, towering iced cinnamon buns and flaky pastries.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich brunch"><div class="free-badge">Free Listing</div><span class="basic-tag">Café · Brunch</span><div class="basic-name">Frank's Bar & Bakery</div><div class="basic-meta">📍 Exchange St · Café Bar · £</div><div class="basic-meta">Creative café with a loyal following. Great coffee, inventive food and a warm, independent atmosphere.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich brunch"><div class="free-badge">Free Listing</div><span class="basic-tag">Patisserie</span><div class="basic-name">Macarons & More</div><div class="basic-meta">📍 Royal Arcade · Patisserie · £</div><div class="basic-meta">Run by MasterChef finalist Tim Kinnaird. Witty window displays and exquisite handmade macarons.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Asian Fusion</span><div class="basic-name">Blue Joanna</div><div class="basic-meta">📍 Norwich City · Asian Fusion · ££</div><div class="basic-meta">Buzzy Asian restaurant with a painted blue piano, live vinyl and Korean Blue tacos.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Chinese · Dim Sum</span><div class="basic-name">Baby Buddha</div><div class="basic-meta">📍 Norwich City · Chinese · ££</div><div class="basic-meta">Family-run Chinese teahouse specialising in dim sum. Excellent cheung fun and steamed dumplings.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">British · Bar</span><div class="basic-name">Assembly House</div><div class="basic-meta">📍 Theatre St · British · £££</div><div class="basic-meta">Grand Grade I listed building with elegant dining rooms, afternoon teas and a celebrated events calendar.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Bar & Dining</span><div class="basic-name">The Bicycle Shop</div><div class="basic-meta">📍 St Benedicts St · European · ££</div><div class="basic-meta">Stunning Victorian cycle shop conversion. Cocktails, sharing plates and a beautiful atmospheric interior.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Japanese Fusion</span><div class="basic-name">Yalm</div><div class="basic-meta">📍 Norwich City · Japanese Fusion · ££</div><div class="basic-meta">Creative Japanese-inspired small plates in a relaxed setting. The wagyu gyoza is unmissable.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich brunch"><div class="free-badge">Free Listing</div><span class="basic-tag">Brunch</span><div class="basic-name">Figbar</div><div class="basic-meta">📍 Norwich City · All-Day Brunch · £</div><div class="basic-meta">Arguably the city's best brunch spot. Expect a queue — it's worth every minute.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Bar & Dining</span><div class="basic-name">Melville & Sons</div><div class="basic-meta">📍 Norwich City · Bar & Dining · ££</div><div class="basic-meta">Stylish yet welcoming bar and restaurant near Norwich Cathedral with an inventive drinks menu.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="norwich"><div class="free-badge">Free Listing</div><span class="basic-tag">Caribbean</span><div class="basic-name">Turtle Bay Norwich</div><div class="basic-meta">📍 Norwich City · Caribbean · ££</div><div class="basic-meta">Vibrant tropical restaurant and bar in the heart of the city. Rum cocktails and Caribbean soul food.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- NORTH NORFOLK COAST — BASIC LISTINGS -->
+    <!-- ══════════════════════════════════════════ -->
+    <div class="region-label" data-region="northnorfolk">North Norfolk Coast</div>
+    <div class="basic-grid" id="northNorfolkGrid">
+
+      <div class="basic-card" data-tags="northnorfolk finedining"><div class="free-badge">Free Listing</div><span class="basic-tag">Michelin Star</span><div class="basic-name">The Neptune, Old Hunstanton</div><div class="basic-meta">📍 Old Hunstanton · Modern British · ££££</div><div class="basic-meta">Michelin-starred restaurant with rooms. Exceptional, refined cooking from Kevin Mangeolles.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk finedining"><div class="free-badge">Free Listing</div><span class="basic-tag">Michelin Star</span><div class="basic-name">Meadowsweet, Holt</div><div class="basic-meta">📍 Holt · Modern British · ££££</div><div class="basic-meta">Faultless hospitality and exquisite modern-classical cooking from Greg Anderson. Book well ahead.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk finedining"><div class="free-badge">Free Listing</div><span class="basic-tag">Michelin Star</span><div class="basic-name">Socius, Burnham Market</div><div class="basic-meta">📍 Burnham Market · Modern British · ££££</div><div class="basic-meta">Michelin-starred restaurant in the heart of Burnham Market. Innovative tasting menus using local produce.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Dining</span><div class="basic-name">The White Horse, Brancaster Staithe</div><div class="basic-meta">📍 Brancaster Staithe · Seafood · £££</div><div class="basic-meta">Stunning views over the salt marshes. Fresh local seafood from breakfast to dinner. A North Norfolk institution.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Dining</span><div class="basic-name">The Gunton Arms, Thorpe Market</div><div class="basic-meta">📍 Thorpe Market · Game · £££</div><div class="basic-meta">Venison from the deer park cooked over an open fire in the Elk Room. Norfolk's most dramatic pub dining.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Dining</span><div class="basic-name">Wiveton Bell</div><div class="basic-meta">📍 Wiveton · British · ££</div><div class="basic-meta">Sister property to The Feathers Holt. Pretty village-green setting, tasty pub fare and a warm welcome.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Fish & Chips</span><div class="basic-name">No1 Cromer</div><div class="basic-meta">📍 Cromer Seafront · Fish & Chips · £</div><div class="basic-meta">Galton Blackiston's celebrated fish & chip restaurant. Times Top 6 by the sea — locally sourced and unmissable.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Seafood</span><div class="basic-name">Wells Crab House</div><div class="basic-meta">📍 Wells-next-the-Sea · Seafood · £££</div><div class="basic-meta">Monthly seasonal menu with crab, lobster and oysters as constants. Book well in advance — tiny and very popular.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Dining</span><div class="basic-name">The Duck, Stanhoe</div><div class="basic-meta">📍 Stanhoe · Modern British · £££</div><div class="basic-meta">Seasonal menus sourcing the best seafood from Cromer to Wells plus free-range local meats. Great cocktails.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Bistro</span><div class="basic-name">Gibson's Bistro, Cromer</div><div class="basic-meta">📍 Church St, Cromer · British · ££</div><div class="basic-meta">Husband and wife team, 25 years chef experience. Fresh locally sourced Norfolk produce, brunch through dinner.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Bistro</span><div class="basic-name">Michael's Bistro, Holt</div><div class="basic-meta">📍 Holt · Modern British · ££</div><div class="basic-meta">Norfolk ingredients meets global inspiration. Memorable dining in the charming market town of Holt.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Dining</span><div class="basic-name">The Feathers Hotel, Holt</div><div class="basic-meta">📍 Holt · British · ££</div><div class="basic-meta">Historic Grade II listed coaching inn from 1650. Excellent breakfasts and a warm Norfolk welcome.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="northnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Bistro · Estate Dining</span><div class="basic-name">The Glaven Bistro, Glandford</div><div class="basic-meta">📍 Bayfield Estate, Glandford · British · ££</div><div class="basic-meta">Converted carrot barn on the Bayfield Estate near Holt. Dog-friendly, family-run, art and local produce.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- NORFOLK BROADS — BASIC LISTINGS -->
+    <!-- ══════════════════════════════════════════ -->
+    <div class="region-label" data-region="broads">The Norfolk Broads</div>
+    <div class="basic-grid" id="broadsGrid">
+
+      <div class="basic-card" data-tags="broads finedining"><div class="free-badge">Free Listing</div><span class="basic-tag">Michelin Star</span><div class="basic-name">Store at Toad Hall, Loddon</div><div class="basic-meta">📍 River Tas, Loddon · Modern British · ££££</div><div class="basic-meta">Michelin-starred offshoot of the 700-year-old Toad Hall mill. Seven-course tasting menu, worth every penny.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="broads pub finedining"><div class="free-badge">Free Listing</div><span class="basic-tag">Gastro Pub</span><div class="basic-name">The Ingham Swan</div><div class="basic-meta">📍 Ingham · Modern British · £££</div><div class="basic-meta">Chef-patron Daniel Smith's thatched 14th-century pub. Inventive seasonal cooking in beautiful surroundings.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="broads pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Mill Dining</span><div class="basic-name">Sculthorpe Mill</div><div class="basic-meta">📍 Sculthorpe, Fakenham · British · ££</div><div class="basic-meta">Great British food in a striking riverside mill. Hidden gem built atop the River Wensum, dating to 1757.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="broads pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Country Pub</span><div class="basic-name">The Lodge at Salhouse</div><div class="basic-meta">📍 Salhouse · British · ££</div><div class="basic-meta">Family-run pub in a 19th-century vicarage set in seven acres of countryside. AA Rosette for its excellent menu.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="broads pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Dining</span><div class="basic-name">The Wildebeest, Stoke Holy Cross</div><div class="basic-meta">📍 Stoke Holy Cross · Modern British · £££</div><div class="basic-meta">Upmarket pub restaurant with a lovely ambience, popular for special occasions. Excellent Beef Wellington.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="broads pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Dining</span><div class="basic-name">The Cricketers on the Green, Aldborough</div><div class="basic-meta">📍 Aldborough · Modern British · £££</div><div class="basic-meta">Multi award-winning pub on a quintessential English village green. Seasonal menus from chefs Jake Wragg & Richard Hart.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- SOUTH NORFOLK & GREAT YARMOUTH -->
+    <!-- ══════════════════════════════════════════ -->
+    <div class="region-label" data-region="southnorfolk">South Norfolk & Great Yarmouth</div>
+    <div class="basic-grid" id="southNorfolkGrid">
+
+      <div class="basic-card" data-tags="southnorfolk pub finedining"><div class="free-badge">Free Listing</div><span class="basic-tag">Gastro Pub</span><div class="basic-name">The Queen's Head, Wymondham</div><div class="basic-meta">📍 Wymondham · British · ££</div><div class="basic-meta">Consistently praised local favourite in Wymondham. Comfortable, reliable and excellent Sunday roasts.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="southnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Fine Dining</span><div class="basic-name">Tatlers Restaurant</div><div class="basic-meta">📍 Norwich · Fine Dining · £££</div><div class="basic-meta">Elegant fine dining with an emphasis on natural, sustainable food from dedicated UK farmers and fishermen.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="southnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Seafood</span><div class="basic-name">Chico's Restaurant, Great Yarmouth</div><div class="basic-meta">📍 Marine Parade, Great Yarmouth · Seafood · £££</div><div class="basic-meta">Continental bistro on the seafront. Surf & turf sharing platters, lobster and the freshest local fish.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="southnorfolk"><div class="free-badge">Free Listing</div><span class="basic-tag">Seafood · Grill</span><div class="basic-name">Black Rock Grill, Great Yarmouth</div><div class="basic-meta">📍 Great Yarmouth · Grill · ££</div><div class="basic-meta">Popular grill restaurant on the Norfolk coast. Fresh fish, steaks and a lively atmosphere.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="southnorfolk pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Dining</span><div class="basic-name">The King's Head, Bawburgh</div><div class="basic-meta">📍 Bawburgh, Norwich · British · ££</div><div class="basic-meta">Award-winning thatched village pub just outside Norwich. Beloved for its warm hospitality and seasonal menus.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+      <div class="basic-card" data-tags="southnorfolk pub"><div class="free-badge">Free Listing</div><span class="basic-tag">Pub · Dining</span><div class="basic-name">The Brisley Bell</div><div class="basic-meta">📍 Brisley, Dereham · British · ££</div><div class="basic-meta">Wonderful food, a great selection of drinks and totally cosy bedrooms. Dogs very welcome.</div><a href="#contact" class="claim-btn">⚡ Claim & Upgrade</a></div>
+
+    </div>
+
+    <div class="listing-cta">
+      <div><h3>Don't see your venue?</h3><p>Submit your restaurant for a free basic listing, or enquire about a featured reviewed partnership.</p></div>
+      <a href="#contact" class="btn-primary" style="white-space:nowrap;">Add Your Venue →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- INTERACTIVE MAP -->
+<section id="map" style="background:var(--white);padding:6rem 3rem;">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <div class="section-eyebrow">Explore Norfolk</div>
+        <h2 class="section-title">Find Your Next Meal</h2>
+        <p class="section-sub">All our reviewed restaurants mapped across Norwich and Norfolk. Click any pin for details.</p>
+      </div>
+      <a href="#directory" class="btn-ghost-teal">View Full Directory →</a>
+    </div>
+
+    <!-- Map filter pills -->
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;" id="mapFilters">
+      <button class="filter-btn active" onclick="filterMapPins('all',this)">All</button>
+      <button class="filter-btn" onclick="filterMapPins('norwich',this)">Norwich City</button>
+      <button class="filter-btn" onclick="filterMapPins('norfolk',this)">Norfolk Wide</button>
+      <button class="filter-btn" onclick="filterMapPins('pub',this)">Pubs</button>
+      <button class="filter-btn" onclick="filterMapPins('finedining',this)">Fine Dining</button>
+      <button class="filter-btn" onclick="filterMapPins('brunch',this)">Brunch & Café</button>
+    </div>
+
+    <!-- Map container -->
+    <div id="eonMap" style="width:100%;height:520px;border-radius:8px;border:1px solid var(--border);overflow:hidden;background:var(--off-white);position:relative;">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;color:var(--mid);" id="mapLoading">
+        <div style="font-size:2rem;">🗺️</div>
+        <div style="font-size:0.85rem;font-weight:600;">Loading map…</div>
+      </div>
+    </div>
+
+    <!-- Pin legend -->
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1rem;font-size:0.72rem;font-weight:600;color:var(--mid);">
+      <span>🟢 Reviewed by us</span>
+      <span>⭐ Editor's pick</span>
+      <span>🏅 Award winning</span>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <div class="section-eyebrow">From The Blog</div>
+        <h2 class="section-title">Latest Reviews</h2>
+        <p class="section-sub">In-depth write-ups on the restaurants, cafés and bars we've visited across Norfolk.</p>
+      </div>
+      <a href="#" class="btn-ghost-teal">All Reviews →</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="bc-image bg-gastro">🥩<div class="bc-tag">Review · AD/PR</div></div>
+        <div class="bc-body">
+          <div class="bc-date">2026 · Blofield</div>
+          <h3 class="bc-title">King's Head Blofield: The 2026 Menu Reboot Is Stunning</h3>
+          <p class="bc-excerpt">One of our favourite places just levelled up. A Baron Bigod donut starter, Norfolk black chicken supreme and a rhubarb & custard mille-feuille — the new menu is absolutely firing.</p>
+          <a href="#" class="bc-read">Read Review →</a>
+        </div>
+      </div>
+      <div class="blog-side">
+        <div class="blog-card">
+          <div class="bc-image-sm bg-brunch">🥗<div class="bc-tag">Review · PR</div></div>
+          <div class="bc-body">
+            <div class="bc-date">2025 · Norwich Lanes</div>
+            <h4 class="bc-title-sm">Chia Norwich: The Prettiest New Brunch in the City</h4>
+            <p class="bc-excerpt" style="font-size:0.8rem;">The pistachio basque cheesecake alone is worth the trip.</p>
+            <a href="#" class="bc-read">Read →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="bc-image-sm bg-pub">🥧<div class="bc-tag">Review · PR</div></div>
+          <div class="bc-body">
+            <div class="bc-date">2025 · Salhouse</div>
+            <h4 class="bc-title-sm">The Stag: Pie Night Is The Only Night That Matters</h4>
+            <p class="bc-excerpt" style="font-size:0.8rem;">Steak & ale pie, mash and gravy for £12. Bargain of the year.</p>
+            <a href="#" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <div class="section-eyebrow">@eat_out_norwich</div>
+        <h2 class="section-title">Follow Along on Instagram</h2>
+        <p class="section-sub">Daily food content, stories and recommendations — all on our Instagram.</p>
+      </div>
+      <a href="https://www.instagram.com/eat_out_norwich/?hl=en" target="_blank" class="btn-primary">Follow Us →</a>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-cell bg-gastro"><span>🥩</span><div class="insta-overlay">View Post</div></div>
+      <div class="insta-cell bg-greek"><span>🇬🇷</span><div class="insta-overlay">View Post</div></div>
+      <div class="insta-cell bg-brunch"><span>🥗</span><div class="insta-overlay">View Post</div></div>
+      <div class="insta-cell bg-bakery"><span>🥐</span><div class="insta-overlay">View Post</div></div>
+      <div class="insta-cell bg-pub"><span>🥧</span><div class="insta-overlay">View Post</div></div>
+    </div>
+    <p class="insta-handle">Find us at <a href="https://www.instagram.com/eat_out_norwich/?hl=en" target="_blank">@eat_out_norwich</a> on Instagram</p>
+  </div>
+</section>
+
+<!-- WORK WITH US -->
+<section id="work">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-eyebrow" style="justify-content:center;">For Restaurants & Brands</div>
+      <h2 class="section-title">Work With Us</h2>
+      <p class="section-sub" style="margin:0 auto;">Four ways to get in front of Norfolk's most engaged food audience.</p>
+    </div>
+    <div class="packages-grid">
+      <div class="package-card">
+        <div class="pkg-name">Free Listing</div>
+        <div class="pkg-label">Basic directory entry</div>
+        <div class="pkg-price">Free</div>
+        <ul class="pkg-features">
+          <li class="pkg-feature">Name, location & cuisine</li>
+          <li class="pkg-feature">One-line description</li>
+          <li class="pkg-feature">Searchable & filterable</li>
+          <li class="pkg-feature">Claim anytime to upgrade</li>
+        </ul>
+        <a href="#contact" class="btn-outline-light">Get Listed Free</a>
+      </div>
+      <div class="package-card">
+        <div class="pkg-name">Standard Listing</div>
+        <div class="pkg-label">Enhanced directory profile</div>
+        <div class="pkg-price">£49<span>/year</span></div>
+        <ul class="pkg-features">
+          <li class="pkg-feature">Full profile & your description</li>
+          <li class="pkg-feature">Menu & website links</li>
+          <li class="pkg-feature">Contact & booking details</li>
+          <li class="pkg-feature">Photo & logo upload</li>
+        </ul>
+        <button class="btn-outline-light" onclick="stripeCheckout('standard')">Pay Now — £49/yr</button>
+      </div>
+      <div class="package-card highlighted">
+        <div class="pkg-popular">Most Popular</div>
+        <div class="pkg-name">Featured Partner</div>
+        <div class="pkg-label">Content + directory partnership</div>
+        <div class="pkg-price">£99<span>/month</span></div>
+        <ul class="pkg-features">
+          <li class="pkg-feature">Top placement in directory</li>
+          <li class="pkg-feature">1 sponsored Instagram reel/post</li>
+          <li class="pkg-feature">Instagram Stories feature</li>
+          <li class="pkg-feature">Blog review post</li>
+          <li class="pkg-feature">Monthly performance report</li>
+        </ul>
+        <button class="btn-primary" style="display:block;text-align:center;width:100%;border:none;cursor:pointer;" onclick="stripeCheckout('featured')">Pay Now — £99/mo</button>
+      </div>
+      <div class="package-card">
+        <div class="pkg-name">Custom Campaign</div>
+        <div class="pkg-label">Bespoke partnerships</div>
+        <div class="pkg-price">POA</div>
+        <ul class="pkg-features">
+          <li class="pkg-feature">Food tours & events</li>
+          <li class="pkg-feature">Brand collaborations</li>
+          <li class="pkg-feature">Reel & video production</li>
+          <li class="pkg-feature">Full campaign strategy</li>
+        </ul>
+        <button class="btn-outline-light" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enquire →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="section-eyebrow">Say Hello</div>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact-intro">Whether you're a restaurant looking to be listed, a brand interested in collaborating, or you've got a hot tip on a new opening — we'd love to hear from you.</p>
+        <div class="contact-detail"><div class="contact-icon">📧</div><div class="contact-detail-text"><h4>Email</h4><p>eatoutnorwich@gmail.com</p></div></div>
+        <div class="contact-detail"><div class="contact-icon">📍</div><div class="contact-detail-text"><h4>Based In</h4><p>Norwich, Norfolk</p></div></div>
+        <div class="contact-detail"><div class="contact-icon">📸</div><div class="contact-detail-text"><h4>Instagram</h4><p>@eat_out_norwich</p></div></div>
+        <div class="social-row">
+          <a href="https://www.instagram.com/eat_out_norwich/?hl=en" target="_blank" class="social-btn social-btn-insta">
+            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/eatoutnorwich" target="_blank" class="social-btn social-btn-fb">
+            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mykowyda" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label>Restaurant / Brand</label>
+              <input type="text" name="restaurant" placeholder="The Coffee House">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="jane@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>I'm interested in…</label>
+            <select name="interest">
+              <option>Free Listing (submit my venue)</option>
+              <option>Standard Listing (£49/yr)</option>
+              <option>Featured Partner Package (£99/mo)</option>
+              <option>Custom Campaign / Events</option>
+              <option>Claiming an existing listing</option>
+              <option>Suggesting a Restaurant</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="4" placeholder="Tell us a bit about what you're looking for..."></textarea>
+          </div>
+          <!-- Formspree honeypot spam filter -->
+          <input type="text" name="_gotcha" style="display:none">
+          <!-- Redirect back to site after submission -->
+          <input type="hidden" name="_next" value="https://eatoutnorwich.com/#contact">
+          <input type="hidden" name="_subject" value="New enquiry from Eat Out Norwich website">
+          <button type="submit" class="btn-primary" id="sendBtn" style="width:100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><img src="data:image/png;base64,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" alt="Eat Out Norwich"></div>
+    <div class="footer-links">
+      <a href="#directory">Directory</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#work">Work With Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Eat Out Norwich. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // ═══════════════════════════════════════════════════════
+  // GOOGLE PLACES PHOTO ENGINE
+  // ═══════════════════════════════════════════════════════
+  // 1. Go to console.cloud.google.com
+  // 2. Create a project, enable: Places API + Maps JavaScript API
+  // 3. Create an API key, paste it below
+  // 4. Save the file — all cards will load real photos automatically
+  // ═══════════════════════════════════════════════════════
+  const GOOGLE_API_KEY = 'AIzaSyDWAVS49RZDe4qE5ngpmF-NEGT7XgLdzkk';
+
+  // Cache so we don't re-fetch on filter toggle
+  const photoCache = {};
+
+  async function fetchPlacePhoto(query) {
+    if (photoCache[query]) return photoCache[query];
+    if (GOOGLE_API_KEY === 'YOUR_GOOGLE_API_KEY') return null;
+
+    try {
+      // Step 1: Find place ID
+      const findUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${encodeURIComponent(query)}&inputtype=textquery&fields=place_id,photos&key=${GOOGLE_API_KEY}`;
+      const findRes = await fetch(`https://corsproxy.io/?${encodeURIComponent(findUrl)}`);
+      const findData = await findRes.json();
+
+      if (!findData.candidates?.[0]) return null;
+      const candidate = findData.candidates[0];
+
+      // If photos came back in findplace response, use them
+      if (candidate.photos?.[0]?.photo_reference) {
+        const ref = candidate.photos[0].photo_reference;
+        const photoUrl = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photo_reference=${ref}&key=${GOOGLE_API_KEY}`;
+        photoCache[query] = photoUrl;
+        return photoUrl;
+      }
+
+      // Step 2: Get place details for photo reference
+      const detailsUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${candidate.place_id}&fields=photos&key=${GOOGLE_API_KEY}`;
+      const detailsRes = await fetch(`https://corsproxy.io/?${encodeURIComponent(detailsUrl)}`);
+      const detailsData = await detailsRes.json();
+
+      const photoRef = detailsData.result?.photos?.[0]?.photo_reference;
+      if (!photoRef) return null;
+
+      const photoUrl = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photo_reference=${photoRef}&key=${GOOGLE_API_KEY}`;
+      photoCache[query] = photoUrl;
+      return photoUrl;
+
+    } catch (e) {
+      console.warn('Places API error for:', query, e);
+      return null;
+    }
+  }
+
+  async function loadAllPhotos() {
+    const imageEls = document.querySelectorAll('.rc-image[data-place]');
+
+    // Load in batches of 3 to avoid rate limiting
+    const batchSize = 3;
+    for (let i = 0; i < imageEls.length; i += batchSize) {
+      const batch = Array.from(imageEls).slice(i, i + batchSize);
+      await Promise.all(batch.map(async (el) => {
+        const query = el.dataset.place;
+        const photoUrl = await fetchPlacePhoto(query);
+        if (photoUrl) {
+          // Pre-load image then apply
+          const img = new Image();
+          img.onload = () => {
+            el.style.backgroundImage = `url('${photoUrl}')`;
+            el.style.backgroundSize = 'cover';
+            el.style.backgroundPosition = 'center';
+            el.classList.remove('loading');
+            const placeholder = el.querySelector('.rc-placeholder-text');
+            if (placeholder) placeholder.style.display = 'none';
+          };
+          img.src = photoUrl;
+        } else {
+          // No photo found — show styled initials placeholder
+          el.classList.remove('loading');
+          el.style.background = 'var(--teal-dark)';
+          const placeholder = el.querySelector('.rc-placeholder-text');
+          if (placeholder) placeholder.style.color = 'rgba(200,214,43,0.5)';
+        }
+      }));
+      // Small pause between batches
+      if (i + batchSize < imageEls.length) {
+        await new Promise(r => setTimeout(r, 200));
+      }
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // FILTER
+  // ═══════════════════════════════════════════════════════
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.restaurant-card').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.tags.includes(filter)) ? '' : 'none';
+      });
+      document.querySelectorAll('.basic-card').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.tags.includes(filter)) ? '' : 'none';
+      });
+      document.querySelectorAll('.region-label').forEach(label => {
+        const region = label.dataset.region;
+        if (!region) return;
+        const gridId = region + 'Grid';
+        const grid = document.getElementById(gridId);
+        if (grid) {
+          const anyVisible = Array.from(grid.querySelectorAll('.basic-card')).some(c => c.style.display !== 'none');
+          label.style.display = anyVisible ? '' : 'none';
+        }
+      });
+    });
+  });
+
+  // ═══════════════════════════════════════════════════════
+  // MOBILE MENU
+  // ═══════════════════════════════════════════════════════
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.querySelector('.nav-links');
+  let menuOpen = false;
+  menuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    navLinks.style.cssText = menuOpen
+      ? 'display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:white;padding:1.5rem 2rem;border-bottom:3px solid var(--lime);z-index:99;gap:1.2rem;'
+      : 'display:none;';
+  });
+
+  // ═══════════════════════════════════════════════════════
+  // CONTACT FORM — Formspree AJAX submission
+  // ═══════════════════════════════════════════════════════
+  const contactForm = document.getElementById('contactForm');
+  const sendBtn = document.getElementById('sendBtn');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      sendBtn.textContent = 'Sending…';
+      sendBtn.disabled = true;
+      sendBtn.style.opacity = '0.7';
+
+      try {
+        const data = new FormData(contactForm);
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          sendBtn.textContent = '✓ Message Sent!';
+          sendBtn.style.background = 'var(--teal)';
+          sendBtn.style.color = 'white';
+          sendBtn.style.opacity = '1';
+          contactForm.reset();
+        } else {
+          throw new Error('Server error');
+        }
+      } catch(err) {
+        sendBtn.textContent = 'Error — please try again';
+        sendBtn.style.background = '#c0392b';
+        sendBtn.style.color = 'white';
+        sendBtn.style.opacity = '1';
+        sendBtn.disabled = false;
+      }
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // INTERACTIVE MAP
+  // ═══════════════════════════════════════════════════════
+  const MAP_PLACES = [
+    { name: "King's Head Blofield", lat: 52.6178, lng: 1.4642, tag: "pub finedining norfolk", emoji: "🥩", award: "2 AA Rosettes", desc: "Modern British · £££" },
+    { name: "Norfolk's Edge", lat: 52.6309, lng: 1.2974, tag: "finedining norfolk norwich", emoji: "🍽️", desc: "Private Dining · ££££" },
+    { name: "Mowgli Street Food", lat: 52.6267, lng: 1.2952, tag: "norwich", emoji: "🥘", desc: "Indian Street Food · ££" },
+    { name: "Big Gyros", lat: 52.6321, lng: 1.2889, tag: "norwich", emoji: "🇬🇷", desc: "Greek · ££" },
+    { name: "Rivolo Lounge", lat: 52.6252, lng: 1.3012, tag: "norwich brunch", emoji: "🥂", desc: "All-Day Dining · ££" },
+    { name: "Loaf Micro Bakery", lat: 52.6298, lng: 1.2901, tag: "norwich brunch", emoji: "🥐", desc: "Artisan Bakery · £" },
+    { name: "Larry's Pizzeria", lat: 52.7176, lng: 1.4112, tag: "norfolk", emoji: "🍕", desc: "Pizza & Street Food · £" },
+    { name: "The Stag Salhouse", lat: 52.6793, lng: 1.3834, tag: "norfolk pub", emoji: "🥧", desc: "Country Pub · ££" },
+    { name: "OP Coffee Co.", lat: 52.6309, lng: 1.2980, tag: "norwich brunch", emoji: "☕", desc: "Speciality Coffee · £" },
+    { name: "Chia Norwich", lat: 52.6305, lng: 1.2912, tag: "norwich brunch", emoji: "🥗", desc: "Brunch · £" },
+    { name: "The Huntsman Strumpshaw", lat: 52.6201, lng: 1.4289, tag: "norfolk pub", emoji: "🔥", desc: "Country Pub · ££" }
+  ];
+
+  let map, markers = [], infoWindow;
+
+  function initMap() {
+    const norwich = { lat: 52.6411, lng: 1.3265 };
+    map = new google.maps.Map(document.getElementById('eonMap'), {
+      center: norwich,
+      zoom: 10,
+      styles: [
+        { featureType: 'all', elementType: 'geometry', stylers: [{ color: '#f8f9f3' }] },
+        { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#dde8e7' }] },
+        { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#ffffff' }] },
+        { featureType: 'road.arterial', elementType: 'geometry', stylers: [{ color: '#e8f4f3' }] },
+        { featureType: 'poi.park', elementType: 'geometry', stylers: [{ color: '#e4f0e0' }] },
+        { featureType: 'transit', stylers: [{ visibility: 'off' }] },
+        { featureType: 'poi.business', stylers: [{ visibility: 'off' }] },
+        { elementType: 'labels.text.fill', stylers: [{ color: '#5a6b6a' }] },
+        { elementType: 'labels.text.stroke', stylers: [{ color: '#ffffff' }] }
+      ],
+      mapTypeControl: false,
+      streetViewControl: false,
+      fullscreenControl: true
+    });
+
+    document.getElementById('mapLoading').style.display = 'none';
+    infoWindow = new google.maps.InfoWindow();
+
+    MAP_PLACES.forEach((place, i) => {
+      const marker = new google.maps.Marker({
+        position: { lat: place.lat, lng: place.lng },
+        map,
+        title: place.name,
+        label: { text: place.emoji, fontSize: '18px' },
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 18,
+          fillColor: '#c8d62b',
+          fillOpacity: 1,
+          strokeColor: '#0f3d3b',
+          strokeWeight: 2
+        }
+      });
+
+      marker.placeData = place;
+
+      marker.addListener('click', () => {
+        infoWindow.setContent(`
+          <div style="font-family:Montserrat,sans-serif;padding:4px;min-width:180px;">
+            <div style="font-size:1.4rem;margin-bottom:4px;">${place.emoji}</div>
+            <div style="font-weight:800;font-size:0.85rem;color:#0f3d3b;margin-bottom:2px;">${place.name}</div>
+            <div style="font-size:0.72rem;color:#5a6b6a;">${place.desc}</div>
+            ${place.award ? `<div style="font-size:0.65rem;background:#c8d62b;color:#0f3d3b;padding:2px 6px;border-radius:2px;display:inline-block;margin-top:4px;font-weight:800;">🏅 ${place.award}</div>` : ''}
+            <div style="margin-top:8px;"><a href="#directory" style="font-size:0.68rem;font-weight:700;color:#1a5c5a;text-decoration:none;">View listing →</a></div>
+          </div>
+        `);
+        infoWindow.open(map, marker);
+      });
+
+      markers.push(marker);
+    });
+  }
+
+  function filterMapPins(filter, btn) {
+    document.querySelectorAll('#mapFilters .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    markers.forEach((marker, i) => {
+      const place = MAP_PLACES[i];
+      const show = filter === 'all' || place.tag.includes(filter);
+      marker.setVisible(show);
+    });
+  }
+
+  // Load Maps API
+  function loadMapsAPI() {
+    if (typeof google !== 'undefined') { initMap(); return; }
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&callback=initMap`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
+  // Init map when section scrolls into view
+  const mapObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) { loadMapsAPI(); mapObserver.disconnect(); }
+  }, { threshold: 0.1 });
+  const mapEl = document.getElementById('eonMap');
+  if (mapEl) mapObserver.observe(mapEl);
+
+  // ═══════════════════════════════════════════════════════
+  // STRIPE PAYMENT
+  // ═══════════════════════════════════════════════════════
+  // TO ACTIVATE:
+  // 1. Sign up at stripe.com (free)
+  // 2. Create two Payment Links in your Stripe dashboard:
+  //    - Standard Listing: £49 one-off
+  //    - Featured Partner: £99/month recurring
+  // 3. Replace the URLs below with your actual Stripe Payment Link URLs
+  const STRIPE_LINKS = {
+    standard: 'https://buy.stripe.com/REPLACE_WITH_STANDARD_LISTING_LINK',
+    featured: 'https://buy.stripe.com/REPLACE_WITH_FEATURED_PARTNER_LINK'
+  };
+
+  function stripeCheckout(tier) {
+    const url = STRIPE_LINKS[tier];
+    if (url.includes('REPLACE_WITH')) {
+      alert('Payment coming soon! Please get in touch via the contact form below to get listed.');
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+    window.open(url, '_blank');
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // BOOT
+  // ═══════════════════════════════════════════════════════
+  window.addEventListener('load', () => {
+    loadAllPhotos();
+  });
+</script>
+</body>
+</html>

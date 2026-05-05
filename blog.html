@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog & Reviews | Eat Out Norwich</title>
+<meta name="description" content="Honest restaurant reviews, food guides and the best places to eat across Norwich and Norfolk. Updated regularly by @eat_out_norwich.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eatoutnorwich.com/blog">
+<meta property="og:title" content="Blog & Reviews | Eat Out Norwich">
+<meta property="og:description" content="Honest restaurant reviews and food guides across Norwich and Norfolk.">
+<meta property="og:url" content="https://eatoutnorwich.com/blog">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal: #1a5c5a; --teal-dark: #0f3d3b; --lime: #c8d62b; --lime-dark: #a8b520;
+    --white: #ffffff; --off-white: #f8f9f3; --mid: #5a6b6a; --dark: #0d1f1e; --border: #dde8e7;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--dark); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 3rem; height: 70px; background: rgba(255,255,255,0.97); backdrop-filter: blur(14px); border-bottom: 3px solid var(--lime); }
+  .nav-logo { height: 44px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a { text-decoration: none; color: var(--teal); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--lime-dark); }
+  .nav-cta { background: var(--lime) !important; color: var(--teal-dark) !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 800 !important; }
+
+  /* BLOG HERO */
+  .blog-hero { background: var(--teal-dark); padding: 8rem 3rem 4rem; position: relative; overflow: hidden; }
+  .blog-hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(200,214,43,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(200,214,43,0.05) 1px, transparent 1px); background-size: 48px 48px; }
+  .blog-hero-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+  .blog-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lime); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; }
+  .blog-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 2px; background: var(--lime); }
+  .blog-hero h1 { font-family: 'Lora', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 1rem; }
+  .blog-hero h1 em { font-style: italic; color: var(--lime); }
+  .blog-hero p { color: rgba(255,255,255,0.6); font-size: 1rem; max-width: 560px; }
+
+  /* CONTENT */
+  .blog-content { max-width: 1200px; margin: 0 auto; padding: 4rem 3rem; }
+
+  /* FEATURED POST */
+  .featured-post { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; background: var(--off-white); border-radius: 8px; overflow: hidden; margin-bottom: 4rem; border: 1px solid var(--border); cursor: pointer; transition: box-shadow 0.3s; }
+  .featured-post:hover { box-shadow: 0 20px 50px rgba(26,92,90,0.15); }
+  .featured-img { height: 400px; background: var(--teal-dark); display: flex; align-items: center; justify-content: center; font-size: 6rem; position: relative; }
+  .featured-tag { position: absolute; top: 1.2rem; left: 1.2rem; background: var(--lime); color: var(--teal-dark); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; }
+  .featured-body { padding: 2.5rem; }
+  .post-meta { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.8rem; }
+  .featured-body h2 { font-family: 'Lora', serif; font-size: 1.8rem; font-weight: 600; color: var(--teal-dark); line-height: 1.2; margin-bottom: 1rem; }
+  .featured-body p { font-size: 0.92rem; color: var(--mid); line-height: 1.75; margin-bottom: 1.5rem; }
+  .read-more { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); text-decoration: none; transition: gap 0.2s, color 0.2s; border-bottom: 2px solid var(--teal); padding-bottom: 2px; }
+  .read-more:hover { gap: 0.8rem; color: var(--lime-dark); border-color: var(--lime-dark); }
+
+  /* SECTION LABEL */
+  .section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem; }
+  .section-label::before { content: ''; display: block; width: 2rem; height: 2px; background: var(--lime); }
+  .section-title { font-family: 'Lora', serif; font-size: 2rem; font-weight: 600; color: var(--teal-dark); margin-bottom: 2rem; }
+
+  /* POST GRID */
+  .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+  .post-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; cursor: pointer; transition: transform 0.25s, box-shadow 0.25s; }
+  .post-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(26,92,90,0.12); }
+  .post-img { height: 180px; background: var(--teal-dark); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; position: relative; }
+  .post-tag { position: absolute; bottom: 0.8rem; left: 0.8rem; background: var(--lime); color: var(--teal-dark); font-size: 0.58rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 3px; }
+  .post-body { padding: 1.2rem; }
+  .post-body .post-meta { margin-bottom: 0.5rem; }
+  .post-body h3 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 600; color: var(--teal-dark); line-height: 1.35; margin-bottom: 0.6rem; }
+  .post-body p { font-size: 0.8rem; color: var(--mid); line-height: 1.55; margin-bottom: 1rem; }
+  .post-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 0.8rem; border-top: 1px solid var(--border); }
+  .post-mins { font-size: 0.68rem; color: var(--mid); font-weight: 500; }
+
+  /* AI CONTENT AREA */
+  .ai-post-area { background: var(--off-white); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; border: 1px solid var(--border); min-height: 200px; }
+  .ai-loading { display: flex; align-items: center; gap: 1rem; color: var(--mid); font-size: 0.85rem; }
+  .ai-loading-dot { width: 8px; height: 8px; background: var(--lime); border-radius: 50%; animation: pulse 1.2s ease-in-out infinite; }
+  .ai-loading-dot:nth-child(2) { animation-delay: 0.2s; }
+  .ai-loading-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes pulse { 0%,100%{opacity:0.3;transform:scale(0.8)} 50%{opacity:1;transform:scale(1)} }
+
+  /* ARTICLE VIEW */
+  .article-view { display: none; max-width: 780px; margin: 0 auto; }
+  .article-view.active { display: block; }
+  .article-hero-img { height: 360px; background: var(--teal-dark); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 6rem; margin-bottom: 2rem; position: relative; overflow: hidden; }
+  .article-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); text-decoration: none; margin-bottom: 1.5rem; cursor: pointer; transition: color 0.2s; }
+  .article-back:hover { color: var(--lime-dark); }
+  .article-tag { display: inline-block; background: var(--lime); color: var(--teal-dark); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1rem; }
+  .article-title { font-family: 'Lora', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 600; color: var(--teal-dark); line-height: 1.15; margin-bottom: 1rem; }
+  .article-meta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+  .article-body { font-size: 1rem; line-height: 1.85; color: #2a3a39; }
+  .article-body h2 { font-family: 'Lora', serif; font-size: 1.4rem; font-weight: 600; color: var(--teal-dark); margin: 2rem 0 0.8rem; }
+  .article-body h3 { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 600; color: var(--teal-dark); margin: 1.5rem 0 0.5rem; }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.5rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body strong { color: var(--teal-dark); font-weight: 700; }
+  .article-body .highlight-box { background: var(--off-white); border-left: 4px solid var(--lime); padding: 1.2rem 1.5rem; border-radius: 0 6px 6px 0; margin: 1.5rem 0; font-size: 0.95rem; }
+  .article-body .restaurant-card-inline { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 1.2rem; margin: 1rem 0; display: flex; gap: 1rem; align-items: flex-start; }
+  .article-body .restaurant-card-inline .emoji { font-size: 2rem; flex-shrink: 0; }
+  .article-body .restaurant-card-inline h4 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 600; color: var(--teal-dark); margin-bottom: 0.2rem; }
+  .article-body .restaurant-card-inline p { font-size: 0.82rem; color: var(--mid); margin: 0; line-height: 1.5; }
+  .article-body .restaurant-card-inline .tag { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--off-white); color: var(--teal); border: 1px solid var(--border); padding: 0.15rem 0.5rem; border-radius: 2px; display: inline-block; margin-bottom: 0.3rem; }
+  .article-cta { background: var(--teal-dark); border-radius: 6px; padding: 2rem; margin-top: 3rem; text-align: center; border-left: 5px solid var(--lime); }
+  .article-cta h3 { font-family: 'Lora', serif; color: var(--white); font-size: 1.3rem; margin-bottom: 0.5rem; }
+  .article-cta p { color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-bottom: 1.2rem; }
+  .btn-primary { background: var(--lime); color: var(--teal-dark); padding: 0.85rem 2rem; text-decoration: none; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 3px; transition: all 0.2s; display: inline-block; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif; }
+  .btn-primary:hover { background: var(--lime-dark); color: var(--white); }
+
+  /* NEWSLETTER */
+  .newsletter-bar { background: var(--teal); padding: 3rem; border-radius: 8px; text-align: center; margin-bottom: 4rem; }
+  .newsletter-bar h3 { font-family: 'Lora', serif; color: var(--white); font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .newsletter-bar p { color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-size: 0.9rem; }
+  .newsletter-form { display: flex; gap: 0.8rem; max-width: 460px; margin: 0 auto; }
+  .newsletter-form input { flex: 1; padding: 0.8rem 1rem; border: none; border-radius: 3px; font-family: 'Montserrat', sans-serif; font-size: 0.88rem; outline: none; }
+  .newsletter-form input:focus { outline: 2px solid var(--lime); }
+
+  /* FOOTER */
+  footer { background: var(--dark); color: var(--white); padding: 2.5rem 3rem; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+  .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.28); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.73rem; color: rgba(255,255,255,0.42); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--lime); }
+
+  /* bg helpers */
+  .bg-gastro{background:#2a1a0a}.bg-brunch{background:#1a2a10}.bg-pub{background:#0a2a0a}
+  .bg-coast{background:#0a1a3a}.bg-broads{background:#0a2a1a}.bg-guide{background:#1a1a35}
+
+  @media(max-width:900px){
+    nav{padding:0 1.5rem}
+    .blog-hero{padding:6rem 1.5rem 3rem}
+    .blog-content{padding:2rem 1.5rem}
+    .featured-post{grid-template-columns:1fr}
+    .featured-img{height:220px}
+    .post-grid{grid-template-columns:1fr}
+    .newsletter-form{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html"><img class="nav-logo" src="eatout.png" alt="Eat Out Norwich" onerror="this.style.display='none';this.nextSibling.style.display='block'"><span style="display:none;font-family:'Lora',serif;font-size:1.2rem;font-weight:600;color:var(--teal-dark)">Eat Out Norwich</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#directory">Directory</a></li>
+    <li><a href="blog.html" class="active">Reviews</a></li>
+    <li><a href="https://www.instagram.com/eat_out_norwich/" target="_blank">Instagram</a></li>
+    <li><a href="index.html#work">Work With Us</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<!-- BLOG HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="blog-eyebrow">Norfolk's Food Scene</div>
+    <h1>Reviews, guides &amp; <em>hidden gems</em></h1>
+    <p>Honest write-ups from real visits across Norwich and Norfolk — restaurants, pubs, cafés and everything in between.</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="blog-content">
+
+  <!-- INDEX VIEW -->
+  <div id="indexView">
+
+    <!-- FEATURED -->
+    <div class="featured-post" onclick="showPost('best-restaurants-norwich')">
+      <div class="featured-img bg-guide">
+        🍽️
+        <div class="featured-tag">📍 Guide</div>
+      </div>
+      <div class="featured-body">
+        <div class="post-meta">Norwich City · 8 min read</div>
+        <h2>The Best Restaurants in Norwich Right Now (2025)</h2>
+        <p>From Great British Menu tasting menus to hidden Japanese sushi bars and the finest brunch spots in the Lanes — our definitive guide to where to eat in Norwich this year.</p>
+        <span class="read-more">Read the Guide →</span>
+      </div>
+    </div>
+
+    <!-- RECENT POSTS -->
+    <div class="section-label">Latest Reviews & Guides</div>
+    <div class="post-grid">
+
+      <div class="post-card" onclick="showPost('kings-head-blofield-review')">
+        <div class="post-img bg-gastro">🥩<div class="post-tag">Review</div></div>
+        <div class="post-body">
+          <div class="post-meta">Blofield · AD/PR</div>
+          <h3>King's Head Blofield: The 2026 Menu Reboot Is Stunning</h3>
+          <p>The 2 AA Rosette pub just levelled up. Baron Bigod donut, Norfolk black chicken and a rhubarb mille-feuille.</p>
+          <div class="post-footer"><span class="post-mins">5 min read</span><span class="read-more" style="font-size:0.68rem;">Read →</span></div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="showPost('best-brunch-norwich')">
+        <div class="post-img bg-brunch">🥗<div class="post-tag">Guide</div></div>
+        <div class="post-body">
+          <div class="post-meta">Norwich City · Guide</div>
+          <h3>The Best Brunch Spots in Norwich for 2025</h3>
+          <p>From plant-forward chia bowls in the Lanes to the softest cinnamon buns in the city — our brunch guide.</p>
+          <div class="post-footer"><span class="post-mins">6 min read</span><span class="read-more" style="font-size:0.68rem;">Read →</span></div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="showPost('norfolk-broads-restaurants')">
+        <div class="post-img bg-broads">🛶<div class="post-tag">Guide</div></div>
+        <div class="post-body">
+          <div class="post-meta">Norfolk Broads · Guide</div>
+          <h3>Where to Eat Near the Norfolk Broads</h3>
+          <p>The best pubs, restaurants and hidden gems to stop at on or near the Broads — from Salhouse to Wroxham.</p>
+          <div class="post-footer"><span class="post-mins">7 min read</span><span class="read-more" style="font-size:0.68rem;">Read →</span></div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="showPost('best-sunday-roast-norfolk')">
+        <div class="post-img bg-pub">🥩<div class="post-tag">Guide</div></div>
+        <div class="post-body">
+          <div class="post-meta">Norfolk Wide · Guide</div>
+          <h3>The Best Sunday Roasts in Norfolk</h3>
+          <p>Crispy roasties, proper gravy and Yorkshire puddings the size of your head — our guide to Norfolk's finest Sundays.</p>
+          <div class="post-footer"><span class="post-mins">6 min read</span><span class="read-more" style="font-size:0.68rem;">Read →</span></div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="showPost('north-norfolk-coast-restaurants')">
+        <div class="post-img bg-coast">🦀<div class="post-tag">Guide</div></div>
+        <div class="post-body">
+          <div class="post-meta">North Norfolk · Guide</div>
+          <h3>The Best Places to Eat on the North Norfolk Coast</h3>
+          <p>From Michelin-starred Meadowsweet in Holt to fish and chips at No1 Cromer — your coastal dining guide.</p>
+          <div class="post-footer"><span class="post-mins">8 min read</span><span class="read-more" style="font-size:0.68rem;">Read →</span></div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="showPost('stag-salhouse-pie-night')">
+        <div class="post-img bg-pub">🥧<div class="post-tag">Review</div></div>
+        <div class="post-body">
+          <div class="post-meta">Salhouse · AD/PR</div>
+          <h3>The Stag Salhouse: Pie Night Is the Only Night That Matters</h3>
+          <p>Steak and ale pie, mash and gravy for £12 at a 400-year-old pub near Salhouse Broad. The bargain of the year.</p>
+          <div class="post-footer"><span class="post-mins">4 min read</span><span class="read-more" style="font-size:0.68rem;">Read →</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter-bar">
+      <h3>Get the best of Norfolk food in your inbox</h3>
+      <p>New reviews, hidden gems and exclusive deals — straight to you. No spam, ever.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="your@email.com">
+        <button class="btn-primary" onclick="this.textContent='✓ Subscribed!'">Subscribe</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ARTICLE VIEWS -->
+  <div id="articleView" class="article-view">
+    <a class="article-back" onclick="showIndex()">← Back to all posts</a>
+    <div id="articleContent"></div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span style="font-family:'Lora',serif;font-size:1.1rem;font-weight:600;color:var(--white)">Eat Out Norwich</span>
+    <div class="footer-links">
+      <a href="index.html#directory">Directory</a>
+      <a href="blog.html">Reviews</a>
+      <a href="index.html#work">Work With Us</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Eat Out Norwich. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const posts = {
+
+  'best-restaurants-norwich': {
+    tag: 'Guide',
+    emoji: '🍽️',
+    bgClass: 'bg-guide',
+    title: 'The Best Restaurants in Norwich Right Now (2025)',
+    meta: 'Norwich City · 8 min read · Updated 2025',
+    content: `
+      <p>Norwich has quietly become one of England's most exciting food cities. Forget the stereotypes — this medieval city punches well above its weight, with a dining scene that ranges from Great British Menu tasting menus to world-class sushi, brilliant brunch spots and some of the most creative independent restaurants outside London.</p>
+
+      <p>We've eaten our way around the city so you don't have to. Here's our honest guide to the best restaurants in Norwich right now.</p>
+
+      <h2>Fine Dining in Norwich</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🥩</span>
+        <div>
+          <span class="tag">Fine Dining</span>
+          <h4>Benedicts</h4>
+          <p>Richard Bainbridge's flagship on St Benedicts Street is the city's most celebrated restaurant. The Great British Menu chef runs impeccably crafted tasting menus using hyperlocal Norfolk produce. The bone marrow fudge doughnuts are legendary. Book well in advance. <strong>£££ · St Benedicts Street</strong></p>
+        </div>
+      </div>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🍝</span>
+        <div>
+          <span class="tag">Fine Dining · Italian</span>
+          <h4>Benoli</h4>
+          <p>Oliver Boon's Italian restaurant on Timber Hill is genuinely exceptional. His CV includes Gordon Ramsay and Michel Roux Jr., and every dish shows it. The 24-month Parmesan croquettes and beef carpaccio are among the best things we've eaten in Norfolk. <strong>£££ · Timber Hill</strong></p>
+        </div>
+      </div>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🫕</span>
+        <div>
+          <span class="tag">Fine Dining · Modern British</span>
+          <h4>Roger Hickman's</h4>
+          <p>Elegant and refined, Roger Hickman's on Upper St Giles Street delivers precise, beautifully sourced modern British cooking. The tasting menus are exceptional value for the quality on the plate. <strong>£££ · Upper St Giles Street</strong></p>
+        </div>
+      </div>
+
+      <h2>Best for Brunch in Norwich</h2>
+
+      <p>Norwich has a genuinely brilliant brunch scene, and these are the spots worth queuing for.</p>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🥗</span>
+        <div>
+          <span class="tag">Brunch · New Opening</span>
+          <h4>Chia Norwich</h4>
+          <p>The city's prettiest new brunch spot, tucked into the Norwich Lanes. Fresh, colourful and full of flavour — the chia bowls, veggie sourdough sandwiches and pistachio basque cheesecake are all outstanding. Lovely coffee too. <strong>£ · Norwich Lanes</strong></p>
+        </div>
+      </div>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🥐</span>
+        <div>
+          <span class="tag">Bakery · Brunch</span>
+          <h4>Loaf Micro Bakery</h4>
+          <p>An award-winning, female-led micro bakery on Dove Street. Their sourdough loaves are crafted over three days, the cinnamon buns are extraordinary and the single-origin coffee is some of the best in the city. Perfect for a slow morning. <strong>£ · Dove Street</strong></p>
+        </div>
+      </div>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">☕</span>
+        <div>
+          <span class="tag">Coffee · Bakery</span>
+          <h4>OP Coffee Co.</h4>
+          <p>Single-origin, small-batch coffee sourced from high-altitude farms in Colombia and Brazil. Named after a Norfolk WW2 veteran, every cup tells a story. Don't leave without trying the Swirl tiramisu bun made with their signature coffee. <strong>£ · Norwich City Centre</strong></p>
+        </div>
+      </div>
+
+      <h2>Best for a Big Night Out</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🥂</span>
+        <div>
+          <span class="tag">Bar & Dining</span>
+          <h4>The Bicycle Shop</h4>
+          <p>A stunning Victorian cycle shop conversion on St Benedicts Street. Beautiful cocktails, European sharing plates and an atmosphere that makes every evening feel like an occasion. One of the most visually spectacular restaurants in the city. <strong>££ · St Benedicts Street</strong></p>
+        </div>
+      </div>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🇬🇷</span>
+        <div>
+          <span class="tag">Greek</span>
+          <h4>Big Gyros</h4>
+          <p>Authentic Greek on Upper St Giles. Gyros, souvlaki, mezze platters and halloumi fries that actually taste like Greece. Their live music nights and plate-smashing events make this one of the most fun evenings in Norwich. <strong>££ · Upper St Giles Street</strong></p>
+        </div>
+      </div>
+
+      <h2>Best for a Casual Lunch</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🥘</span>
+        <div>
+          <span class="tag">Indian Street Food</span>
+          <h4>Mowgli Street Food</h4>
+          <p>Nisha Katona MBE's vibrant Indian street food chain has landed in Chantry Place, and it's brilliant. The £15pp Tiffin lunch offer — soft drink, chat bomb, rice and a curry — is one of the best value meals in the city. <strong>££ · Chantry Place</strong></p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        💡 <strong>Pro tip:</strong> Norwich Market is also worth a visit for a quick lunch — you'll find everything from Vietnamese to Indian to fresh Cromer crab, all at excellent prices.
+      </div>
+
+      <h2>The Verdict</h2>
+
+      <p>Norwich's food scene has never been better. The city has the independent spirit and the talent — what it's lacked historically is the profile. That's changing fast. Whether you're after a Michelin-level tasting menu or the best flat white in the city, you'll find it here.</p>
+
+      <p>We update this guide regularly as we visit new places. Follow us on Instagram <strong>@eat_out_norwich</strong> for the latest discoveries.</p>
+    `
+  },
+
+  'kings-head-blofield-review': {
+    tag: 'Review · AD/PR',
+    emoji: '🥩',
+    bgClass: 'bg-gastro',
+    title: 'King\'s Head Blofield: The 2026 Menu Reboot Is Stunning',
+    meta: 'Blofield, Norwich · 5 min read · AD/PR invite',
+    content: `
+      <p>There are restaurants you visit once and remember fondly, and there are restaurants that become part of your rotation — places you return to because they're consistently, reliably brilliant. The King's Head Blofield has always been the latter. But something has shifted with their 2026 menu reboot. It's not just good. It's <em>very</em> good.</p>
+
+      <p>Sitting just outside Norwich on the Yarmouth Road in Blofield, the King's Head holds 2 AA Rosettes and features in the Good Food Guide — accolades that reflect a kitchen run with genuine ambition. The Hogg family have built something special here: a proper family-run pub that happens to serve food of genuine distinction.</p>
+
+      <h2>What We Ate</h2>
+
+      <p>We visited on a Tuesday evening and the place was quietly buzzing — a mix of locals and people who'd clearly driven in from further afield. The room is warm, unpretentious and comfortable. You feel immediately at ease.</p>
+
+      <div class="highlight-box">
+        🍩 <strong>Starter:</strong> Baron Bigod donut, apple chutney, pickled golden raisin, black olive caramel
+      </div>
+
+      <p>Yes, it's a donut starter. And yes, it sounds slightly unhinged. But it works magnificently — the rich, funky Baron Bigod cheese tempered by the brightness of the apple chutney and the sweet-sharp raisins. It's playful without being gimmicky, which is exactly the tone the new menu strikes throughout.</p>
+
+      <div class="highlight-box">
+        🐔 <strong>Main:</strong> Norfolk black chicken supreme, gratin dauphinois, chicken leg croquette, king oyster mushrooms, tenderstem, shallot crumble, mushroom ketchup, tarragon oil, Madeira jus
+      </div>
+
+      <p>This is a dish that could easily feel overwrought — there are a lot of components — but it's beautifully balanced. The chicken is perfectly cooked, the dauphinois is luxuriously creamy and the croquette adds a wonderful textural contrast. The mushroom ketchup sounds odd but is actually a quietly brilliant condiment.</p>
+
+      <div class="highlight-box">
+        🍮 <strong>Dessert:</strong> Rhubarb & custard mille-feuille, rhubarb gel, rhubarb & custard ice cream
+      </div>
+
+      <p>Technically accomplished and genuinely delicious. The pastry is shattering-crisp, the custard is properly rich and the rhubarb has real sharpness to cut through it. A fitting end to an exceptional meal.</p>
+
+      <h2>The Verdict</h2>
+
+      <p>The King's Head Blofield was already one of the best restaurants near Norwich. The 2026 reboot has elevated it further. This is confident, creative cooking that respects its ingredients and trusts its diners. At these prices — mains typically £20-28 — it represents outstanding value for the quality on the plate.</p>
+
+      <p>Book ahead. This one fills up.</p>
+
+      <p><strong>📍 King's Head Blofield, 39 Yarmouth Rd, Blofield, NR13 4LE<br>
+      ⭐ Rating: 5/5<br>
+      💰 Price: £££<br>
+      📞 01603 336095</strong></p>
+    `
+  },
+
+  'best-brunch-norwich': {
+    tag: 'Guide',
+    emoji: '🥗',
+    bgClass: 'bg-brunch',
+    title: 'The Best Brunch Spots in Norwich for 2025',
+    meta: 'Norwich City · 6 min read',
+    content: `
+      <p>Norwich has one of the best independent brunch scenes of any UK city its size. Forget the chains — the Lanes and beyond are packed with brilliant small spots serving creative, seasonal food with proper coffee. Here's where to go.</p>
+
+      <h2>Best Overall: Chia Norwich</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🥗</span>
+        <div>
+          <span class="tag">New Opening · Plant-Forward</span>
+          <h4>Chia Norwich, Norwich Lanes</h4>
+          <p>The city's most beautiful new brunch spot. Opened in the former Soyokaze restaurant space in the Lanes, Chia is fresh, colourful and completely on its own terms. The chia bowl topped with fruit, almond butter, tahini, nuts and honey is genuinely outstanding — the kind of thing you think about afterwards. The house smoothie (banana, spinach, almond butter, ginger, turmeric, honey, oat milk) is a hug in a glass.</p>
+        </div>
+      </div>
+
+      <p>We also loved the veggie sandwich — red pesto, feta, mozzarella and spinach on sourdough — and the avocado egg toast, which is simple but done perfectly. The pistachio basque cheesecake is a straight 10/10. <strong>Don't leave without it.</strong></p>
+
+      <h2>Best Bakery Brunch: Loaf Micro Bakery</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🥐</span>
+        <div>
+          <span class="tag">Award-Winning Bakery</span>
+          <h4>Loaf Micro Bakery, 15 Dove Street</h4>
+          <p>An award-winning, female-led micro bakery that recently moved to Dove Street to bring the shop and bakehouse under one roof. Everything here is made with obsessive care — their sourdough loaves are crafted over three days, their pastries are plant-forward and imaginative, and the single-origin coffee is exceptional. The chocolate and pistachio knot and cinnamon bun (so soft it barely made it to the table) are must-orders.</p>
+        </div>
+      </div>
+
+      <h2>Best Coffee: OP Coffee Co.</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">☕</span>
+        <div>
+          <span class="tag">Speciality Coffee</span>
+          <h4>OP Coffee Co., Norwich City Centre</h4>
+          <p>Oliver Peters Coffee Co. — named after a Norfolk WW2 veteran — serves some of the finest single-origin coffee in the city. Small-batch roasted beans from Colombia and Brazil, brewed with care. Their collaboration with Swirl Norwich produced a tiramisu bun made with their signature coffee that is genuinely one of the best things we've eaten all year.</p>
+        </div>
+      </div>
+
+      <h2>Also Worth Knowing</h2>
+
+      <p><strong>Bread Source</strong> on St Giles Street is a Norwich institution — towering iced cinnamon buns, flaky pastries and brilliant sourdough. Always busy for good reason.</p>
+
+      <p><strong>Figbar</strong> remains a city favourite for all-day brunch — expect a queue on weekends, but it moves quickly and the food is worth it.</p>
+
+      <p><strong>Frank's Bar & Bakery</strong> on Exchange Street has a warm, independent atmosphere and great coffee — perfect for a slower morning.</p>
+
+      <div class="highlight-box">
+        ⏰ <strong>Timing tip:</strong> For the Lanes spots, aim for 9-10am on weekdays for the calmest experience. Weekend brunching gets busy from 10am onwards — arrive early or expect to queue.
+      </div>
+
+      <h2>The Verdict</h2>
+
+      <p>Norwich's brunch scene is genuinely world class for a city its size. The independents here care deeply about what they serve — you'll rarely have a bad brunch if you stick to the spots on this list.</p>
+    `
+  },
+
+  'norfolk-broads-restaurants': {
+    tag: 'Guide',
+    emoji: '🛶',
+    bgClass: 'bg-broads',
+    title: 'Where to Eat Near the Norfolk Broads',
+    meta: 'Norfolk Broads · 7 min read',
+    content: `
+      <p>The Norfolk Broads is one of England's most unique landscapes — 125 miles of navigable waterways, abundant wildlife and some surprisingly excellent food and drink. Whether you're on a boating holiday, doing a day trip or just exploring the area, here's where to eat.</p>
+
+      <h2>Salhouse: Two Brilliant Pubs</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🥧</span>
+        <div>
+          <span class="tag">Country Pub · AD/PR</span>
+          <h4>The Stag, Salhouse</h4>
+          <p>A beautifully renovated 400-year-old pub near Salhouse Broad. Head Chef Luc Breji runs a daily-changing specials menu using the finest local suppliers — including their own on-site butchery. Their legendary Thursday Pie Night (steak & ale or chicken, bacon & mushroom, with mash and gravy for £12) is one of the best value meals in Norfolk. Dog-friendly, with a lovely beer garden. You can also add truffle mash or red wine jus if you're feeling fancy.</p>
+        </div>
+      </div>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🍺</span>
+        <div>
+          <span class="tag">Country Pub · AA Rosette</span>
+          <h4>The Lodge at Salhouse</h4>
+          <p>A family-run pub in a charming 19th-century vicarage set in seven acres of countryside. Holds an AA Rosette for its excellent menu. Lovely atmosphere, great Sunday roasts and genuinely welcoming staff. Perfect for a long afternoon in the beer garden.</p>
+        </div>
+      </div>
+
+      <h2>Hoveton/Wroxham: The Broads Hub</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🍕</span>
+        <div>
+          <span class="tag">Pizza · Street Food · AD/PR</span>
+          <h4>Larry's Pizzeria, Hoveton</h4>
+          <p>Wroxham's favourite comfort food spot, located in the Riverside Centre. Their "Pizza Your Way" concept lets you build your own pizza at a flat price with up to 6 toppings — no hidden costs. The loaded fries and chilli beef burger are equally good. Rated 4.8 stars on Tripadvisor and ranked #4 of 19 restaurants in Hoveton. Brilliant for families, casual groups and anyone who wants a proper feed after a day on the water.</p>
+        </div>
+      </div>
+
+      <h2>Strumpshaw: A Hidden Gem</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">🔥</span>
+        <div>
+          <span class="tag">Country Pub · AD/PR</span>
+          <h4>The Huntsman, Strumpshaw</h4>
+          <p>A beautifully reopened countryside pub near Strumpshaw Broad with a crackling log fire and a daily-changing specials board celebrating Norfolk game and seasonal produce. The short rib with mash, the deer and beer pie, and the pumpkin pie tartlet are all outstanding. Proper pub atmosphere — exactly what you want after a walk through the Broads. Worth the drive.</p>
+        </div>
+      </div>
+
+      <h2>Fine Dining Near the Broads</h2>
+
+      <p>If you're after something more special, <strong>The Ingham Swan</strong> is a thatched 14th-century pub run by chef-patron Daniel Smith — inventive seasonal cooking in a genuinely magical setting. And <strong>Store at Toad Hall</strong> in Loddon holds a Michelin star for its seven-course tasting menu served in a beautifully restored 700-year-old mill on the River Tas.</p>
+
+      <div class="highlight-box">
+        🚤 <strong>On the water tip:</strong> If you're mooring up, Salhouse Broad has good access to The Stag. The Hoveton/Wroxham area has multiple mooring points close to Larry's and other restaurants.
+      </div>
+    `
+  },
+
+  'best-sunday-roast-norfolk': {
+    tag: 'Guide',
+    emoji: '🥩',
+    bgClass: 'bg-pub',
+    title: 'The Best Sunday Roasts in Norfolk',
+    meta: 'Norfolk Wide · 6 min read',
+    content: `
+      <p>A great Sunday roast is one of life's simple pleasures — crispy roasties, proper gravy, meat cooked exactly right and enough Yorkshire pudding to make you question all your previous life choices. Norfolk does this exceptionally well. Here's where to go.</p>
+
+      <h2>Best Overall: King's Head Blofield</h2>
+
+      <p>Consistently cited as one of the finest Sunday roasts in Norfolk, the King's Head delivers an exceptional experience. The sirloin beef is served pink, with generous portions, beautiful cauliflower cheese and roast potatoes that are properly crispy on the outside and fluffy within. At £24 per person, it's at the pricier end — but worth every penny for a monthly treat. Book well in advance, particularly for Sunday lunch.</p>
+
+      <h2>Best Pub Roast: The Stag Salhouse</h2>
+
+      <p>The Stag's Sunday offering is less formal than the King's Head but no less enjoyable. Head Chef Luc Breji's commitment to local suppliers means the meat quality is exceptional, and the daily-changing approach keeps things interesting. The pub atmosphere — warm, welcoming, 400 years of history — makes this the quintessential Norfolk Sunday experience.</p>
+
+      <h2>Best Fine Dining Sunday: Benedicts, Norwich</h2>
+
+      <p>Richard Bainbridge's flagship doesn't do a traditional Sunday roast — but their Sunday lunch menu is exceptional. Hyperlocal Norfolk produce, beautifully executed, in a relaxed city-centre setting. Different from your traditional pub roast, but outstanding in its own right.</p>
+
+      <h2>Best Near the Coast: The White Horse, Brancaster Staithe</h2>
+
+      <p>Stunning views over the salt marshes, fresh local seafood and a Sunday menu that's become legendary on the North Norfolk coast. Book well ahead for this one — it fills up weeks in advance on Sundays throughout the year.</p>
+
+      <h2>Also Highly Recommended</h2>
+
+      <ul>
+        <li><strong>The Queen's Head, Wymondham</strong> — a consistently excellent local favourite south of Norwich</li>
+        <li><strong>The Cricketers on the Green, Aldborough</strong> — a multi award-winning pub on a beautiful village green</li>
+        <li><strong>The Wiveton Bell</strong> — charming North Norfolk setting, reliable quality</li>
+        <li><strong>The Lodge at Salhouse</strong> — AA Rosette quality in a lovely countryside setting</li>
+      </ul>
+
+      <div class="highlight-box">
+        📅 <strong>Booking essential:</strong> The best Sunday roast spots in Norfolk book up weeks in advance, particularly in summer and around Bank Holidays. Always book at least a week ahead — many of these places are fully booked for Sundays by Wednesday.
+      </div>
+
+      <h2>Tips for the Perfect Norfolk Sunday Roast</h2>
+
+      <p>Arrive hungry. Most of these kitchens serve generous portions. Dress comfortably — the best roast spots in Norfolk are relaxed and welcoming, not stuffy. And always book ahead. The word is out about Norfolk's food scene and the best tables go fast.</p>
+    `
+  },
+
+  'north-norfolk-coast-restaurants': {
+    tag: 'Guide',
+    emoji: '🦀',
+    bgClass: 'bg-coast',
+    title: 'The Best Places to Eat on the North Norfolk Coast',
+    meta: 'North Norfolk · 8 min read',
+    content: `
+      <p>The North Norfolk coast is one of England's most beautiful stretches of coastline — and it has the food scene to match. From Michelin-starred destination dining to the finest fish and chips by the sea, here's your complete guide to eating well on the North Norfolk coast.</p>
+
+      <h2>Michelin Stars on the Coast</h2>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">⭐</span>
+        <div>
+          <span class="tag">Michelin Star</span>
+          <h4>Meadowsweet, Holt</h4>
+          <p>The most exciting fine dining addition to the North Norfolk coast in years. Chef Greg Anderson's cooking at Meadowsweet in Holt is faultless — inspectors have enthused over deep-fried oyster with jalapeño, turbot with ham and whey butter sauce, and raspberry soufflé with meadowsweet custard. Book well ahead — this one is genuinely special.</p>
+        </div>
+      </div>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">⭐</span>
+        <div>
+          <span class="tag">Michelin Star</span>
+          <h4>The Neptune, Old Hunstanton</h4>
+          <p>Kevin Mangeolles' Michelin-starred restaurant with rooms has been a North Norfolk institution for years. Exceptional, refined cooking in a beautiful coastal setting. The tasting menus here are among the finest in East Anglia.</p>
+        </div>
+      </div>
+
+      <div class="restaurant-card-inline">
+        <span class="emoji">⭐</span>
+        <div>
+          <span class="tag">Michelin Star</span>
+          <h4>Socius, Burnham Market</h4>
+          <p>The newest Michelin star in the area, Socius has quickly established itself as one of Burnham Market's finest dining experiences. Innovative tasting menus using local produce in the heart of this charming market town.</p>
+        </div>
+      </div>
+
+      <h2>Best for Atmosphere: The Gunton Arms</h2>
+
+      <p>One of the most dramatic pub dining experiences in England. Located in a deer park, the Elk Room has venison from the estate cooked over a large open fire — it's theatrical, delicious and completely unlike anywhere else. Local mussels and Cromer crab from local fishermen complete the menu. Worth the detour.</p>
+
+      <h2>Best Seafood Dining: The White Horse, Brancaster Staithe</h2>
+
+      <p>Stunning views over the salt marshes and a menu that celebrates the very best local seafood. We've eaten here from breakfast through to dinner and it's consistently excellent. The Brancaster mussels are outstanding. Book well in advance — this is one of the most popular restaurants in Norfolk.</p>
+
+      <h2>Best Fish & Chips: No1 Cromer</h2>
+
+      <p>Galton Blackiston's celebrated fish and chip restaurant on the Cromer seafront is rated among the best in the country — the Times named it 6th best place to eat by the sea. Locally sourced fish, cooked perfectly, with views of the pier. Queue expected at peak times, but worth every minute.</p>
+
+      <h2>Best Seafood Restaurant: Wells Crab House</h2>
+
+      <p>A tiny, intimate seafood restaurant in Wells-next-the-Sea with limited seating — book well in advance. The monthly menu revolves around what's freshest, with crab, lobster and oysters always available. One of the most purely enjoyable seafood experiences on the coast.</p>
+
+      <h2>Best for a Relaxed Lunch</h2>
+
+      <p><strong>The Wiveton Bell</strong> — charming pub in a beautiful village-green setting, sister to The Feathers in Holt. Reliable, good-quality pub food in a lovely atmosphere.<br><br>
+      <strong>Gibson's Bistro, Cromer</strong> — husband and wife team with 25 years of experience, using fresh local produce for brunch through to dinner.<br><br>
+      <strong>The Glaven Bistro, Glandford</strong> — a converted carrot barn on the Bayfield Estate near Holt. Dog-friendly, family-run and brilliant for coffee, cake and a walk.</p>
+
+      <div class="highlight-box">
+        🗺️ <strong>Planning a coastal food trip?</strong> The best strategy is to base yourself in Holt (great central location, excellent choice of restaurants) and day-trip to Cromer for fish and chips, Wells for the Crab House, and Brancaster for The White Horse. Book everything well in advance, especially in summer.
+      </div>
+
+      <h2>The Verdict</h2>
+
+      <p>The North Norfolk coast has never had a better food scene. The combination of exceptional local ingredients — fresh seafood, game from the great estates, vegetables from the best farms in England — and genuinely talented chefs makes this one of the finest food destinations in the country. It's no longer a secret. Book early.</p>
+    `
+  },
+
+  'stag-salhouse-pie-night': {
+    tag: 'Review · AD/PR',
+    emoji: '🥧',
+    bgClass: 'bg-pub',
+    title: 'The Stag Salhouse: Pie Night Is the Only Night That Matters',
+    meta: 'Salhouse · 4 min read · AD/PR invite',
+    content: `
+      <p>There are few things in life as comforting as a proper pie. Not a pie with a pastry lid plonked on top of a filling — a real pie, with pastry on all sides, that holds its shape when you cut into it and floods the plate with proper gravy. The Stag in Salhouse does exactly this, every Thursday, for £12. It is one of the best value meals in Norfolk.</p>
+
+      <h2>The Setting</h2>
+
+      <p>The Stag is a beautifully renovated 400-year-old pub in the village of Salhouse, just a short drive from Norwich and close to Salhouse Broad. Under its current owners, it's been transformed into one of the most appealing pubs in the area — warm, welcoming and with a kitchen that clearly cares about what it sends out.</p>
+
+      <p>Head Chef Luc Breji runs a daily-changing specials menu alongside the pub classics, sourcing from trusted local suppliers — including their own on-site butchery. This commitment to quality shows in everything on the plate.</p>
+
+      <h2>Thursday Pie Night</h2>
+
+      <p>Every Thursday, The Stag runs its famous Pie Night. The choices rotate — we had steak and ale, and chicken, bacon and mushroom — with a vegan option always available. Each pie comes with proper mash and gravy for £12. At that price, it's almost unreasonably good value.</p>
+
+      <p>The steak and ale pie was outstanding — the pastry properly short and crumbly, the filling rich and deeply flavoured with genuinely tender beef. The chicken, bacon and mushroom was lighter but no less satisfying. The mash was buttery and smooth. The gravy was the real thing — dark, rich and clearly made with proper stock.</p>
+
+      <div class="highlight-box">
+        🥧 <strong>The upgrades:</strong> You can add creamed leeks, seasonal greens or roasted root veg, or upgrade to truffle mash or red wine jus if you want to push the boat out. We'd recommend the truffle mash — it transforms an already excellent dish into something genuinely special.
+      </div>
+
+      <h2>The Atmosphere</h2>
+
+      <p>On a Thursday evening in autumn, the pub was warm, busy and full of the sound of people genuinely enjoying themselves. Log fire crackling. Locals at the bar. Families at the bigger tables. It felt exactly like a proper local pub should feel — which is rarer than you'd think.</p>
+
+      <h2>The Verdict</h2>
+
+      <p>The Stag on a Thursday is one of our favourite evenings out in Norfolk. The pie is genuinely excellent, the value is outstanding and the atmosphere is exactly what you want when the weather turns cold. This is comfort food done properly, in a pub that clearly loves what it does.</p>
+
+      <p>Book ahead for Thursday evenings — Pie Night has a following, and the pub fills up.</p>
+
+      <p><strong>📍 The Stag, Lower St, Salhouse, NR13 6RW<br>
+      🥧 Pie Night: Every Thursday<br>
+      💰 Price: ££ (Pie Night from £12)<br>
+      ⭐ Rating: 4.5/5</strong></p>
+    `
+  }
+};
+
+function showPost(slug) {
+  const post = posts[slug];
+  if (!post) return;
+  document.getElementById('indexView').style.display = 'none';
+  const av = document.getElementById('articleView');
+  av.classList.add('active');
+  document.getElementById('articleContent').innerHTML = `
+    <div class="article-hero-img ${post.bgClass}">${post.emoji}</div>
+    <span class="article-tag">${post.tag}</span>
+    <h1 class="article-title">${post.title}</h1>
+    <div class="article-meta">${post.meta}</div>
+    <div class="article-body">${post.content}</div>
+    <div class="article-cta">
+      <h3>Discover more Norfolk food</h3>
+      <p>Browse our full directory of 50+ reviewed restaurants and listings across Norwich and Norfolk.</p>
+      <a href="index.html#directory" class="btn-primary">Browse the Directory →</a>
+    </div>
+  `;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showIndex() {
+  document.getElementById('indexView').style.display = 'block';
+  document.getElementById('articleView').classList.remove('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
