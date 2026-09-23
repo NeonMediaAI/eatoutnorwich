@@ -743,14 +743,25 @@ function showPost(slug) {
       <a href="index.html#directory" class="btn-primary">Browse the Directory →</a>
     </div>
   `;
+  if (location.hash !== '#' + slug) history.pushState(null, '', '#' + slug);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function showIndex() {
   document.getElementById('indexView').style.display = 'block';
   document.getElementById('articleView').classList.remove('active');
+  if (location.hash) history.pushState(null, '', location.pathname);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// Open an article directly from a link like blog.html#kings-head-blofield-review
+function openFromHash() {
+  const slug = decodeURIComponent(location.hash.slice(1));
+  if (slug && posts[slug]) showPost(slug);
+  else if (!slug) { document.getElementById('indexView').style.display = 'block'; document.getElementById('articleView').classList.remove('active'); }
+}
+window.addEventListener('popstate', openFromHash);
+openFromHash();
 </script>
 </body>
 </html>
