@@ -1,0 +1,19 @@
+# Old WordPress site URLs (2019-2021) -> new site, keeps any search value
+/drinks/*          /    301
+/home-delivery/*   /    301
+/gallery/*         /    301
+/collection/*      /    301
+/dessert/*         /    301
+/dinner/*          /    301
+/lunch/*           /    301
+/breakfast/*       /    301
+/sweet-treats/*    /    301
+/uncategorized/*   /    301
+/category/*        /blog    301
+/tag/*             /blog    301
+/author/*          /    301
+/page/*            /    301
+/wp-content/*      /    301
+/wp-admin/*        /    301
+/feed/*            /blog    301
+/feed              /blog    301
